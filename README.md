@@ -1,6 +1,6 @@
 <p>&nbsp;</p>
 <p align="center">
-<img src="https://github.com/terra-rebels/terra-dart/blob/main/img/terradart.png" width=500>
+<img src="https://github.com/terra-rebels/terra-dart/blob/main/img/terradart.png" width=300>
 </p>
 
 <p align="center">
@@ -12,8 +12,8 @@ The Dart SDK for Terra
 <br/>
 
 <p align="center">
-  <img alt="GitHub" src="https://img.shields.io/github/license/terra-money/terra-dart">
-  <img alt="npm (scoped)" src="https://img.shields.io/npm/v/@terra-money/terra-dart">
+  <img alt="GitHub" src="https://img.shields.io/github/license/terra-money/terra.js">
+  <img alt="npm (scoped)" src="https://img.shields.io/npm/v/@terra-money/terra.js">
 </p>
 
 <p align="center">
