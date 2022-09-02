@@ -1,5 +1,5 @@
 name: terra_dart
-description: A starting point for Dart libraries or applications.
+description: TerraDart is the Dart Implementation of Terra.js, the TypeScript Library for developing on Terra Luna. Library For Flutter & Dart Applications
 version: 1.0.0
 homepage: https://github.com/terra-rebels/terra-dart
 
@@ -9,6 +9,18 @@ environment:
 dependencies:
   path: ^1.8.0
   node_interop: ^2.1.0
+  buffer: ^1.1.1
+  http: ^0.13.5
+  bech32: ^0.2.1
+  bip32: ^2.0.0
+  bip39: ^1.0.6
+  decimal: ^2.2.0
+  crypto: ^3.0.2
+  secp256k1: ^0.3.0
+  validated: ^2.0.0
+  protobuf: ^2.1.0
+  web_socket_channel: ^2.2.0
+  hash: ^1.0.4
 
 dev_dependencies:
   lints: ^2.0.0
