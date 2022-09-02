@@ -1,6 +1,6 @@
 <p>&nbsp;</p>
 <p align="center">
-<img src="https://raw.githubusercontent.com/terra-money/terra.js/main/img/terradart.png" width=500>
+<img src="https://github.com/terra-rebels/terra-dart/blob/main/img/terradart.png" width=500>
 </p>
 
 <p align="center">
