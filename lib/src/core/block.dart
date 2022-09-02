@@ -1,4 +1,16 @@
+export interface BlockInfo {
+  block_id: BlockID;
+  block: Block;
+}
 
+export interface Block {
+  header: Header;
+  data: { txs: string[] | null };
+  evidence: Evidence;
+  last_commit: LastCommit;
+}
+
+export interface Evidence {
   evidence: string[];
 }
 
