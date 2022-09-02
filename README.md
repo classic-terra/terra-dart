@@ -4,16 +4,16 @@
 </p>
 
 <p align="center">
-The JavaScript SDK for Terra
+The Dart SDK for Terra
 </p>
 
-![diagram](https://raw.githubusercontent.com/terra-money/terra.js/master/img/terrajs-diagram.png)
+![diagram](https://raw.githubusercontent.com/terra-money/terra-dart/master/img/terrajs-diagram.png)
 
 <br/>
 
 <p align="center">
-  <img alt="GitHub" src="https://img.shields.io/github/license/terra-money/terra.js">
-  <img alt="npm (scoped)" src="https://img.shields.io/npm/v/@terra-money/terra.js">
+  <img alt="GitHub" src="https://img.shields.io/github/license/terra-money/terra-dart">
+  <img alt="npm (scoped)" src="https://img.shields.io/npm/v/@terra-money/terra-dart">
 </p>
 
 <p align="center">
@@ -22,18 +22,18 @@ The JavaScript SDK for Terra
   <br/>
   <a href="https://docs.terra.money/docs/develop/sdks/terra-js/common-examples.html">Examples</a>
   ·
-  <a href="https://terra-money.github.io/terra.js/">API Reference</a>
+  <a href="https://terra-money.github.io/terra-dart/">API Reference</a>
   ·
-  <a href="https://www.npmjs.com/package/@terra-money/terra.js">NPM Package</a>
+  <a href="https://www.npmjs.com/package/@terra-money/terra-dart">Pubspec Package</a>
   ·
-  <a href="https://github.com/terra-money/terra.js">GitHub</a>
+  <a href="https://github.com/terra-rebels/terra-dart">GitHub</a>
 </p>
 
 Terra-dart is a Dart SDK for writing applications that interact with the Terra blockchain from either the Web or Mobile, or Flutter environments and provides simple abstractions over core data structures, serialization, key management, and API request generation.
 
 ## Features
 
-- **Written in TypeScript**, with type definitions
+- **Written in Dart**, with type definitions
 - Versatile support for [key management](https://docs.terra.money/docs/develop/sdks/terra-js/keys.html) solutions
 - Works with Flutter, in the browser, and Mobile
 - Exposes the Terra API through [`LCDClient`](https://docs.terra.money/docs/develop/sdks/terra-js/query-data.html)
@@ -43,20 +43,20 @@ We highly suggest using terra-dart in a code editor that has support for type de
 
 ## Installation
 
-Grab the latest version off [NPM](https://www.npmjs.com/package/@terra-money/terra.js):
+Grab the latest version off [NPM](https://www.npmjs.com/package/@terra-money/terra-dart):
 
 ```sh
-npm install @terra-money/terra.js
+npm install @terra-money/terra-dart
 ```
 
 ## Usage
 
-Terra.js can be used in Node.js, as well as inside the browser. Please check the [docs](https://docs.terra.money/docs/develop/sdks/terra-js/README.html) for notes on how to get up and running.
+terra-dart can be used in Node.js, as well as inside the browser. Please check the [docs](https://docs.terra.money/docs/develop/sdks/terra-js/README.html) for notes on how to get up and running.
 
 ### Getting blockchain data
-:exclamation: terra.js can connect both terra-classic and terra network. If you want to communicate with classic chain, you have to set isClassic as `true`.
+:exclamation: terra-dart can connect both terra-classic and terra network. If you want to communicate with classic chain, you have to set isClassic as `true`.
 ```ts
-import { LCDClient, Coin } from '@terra-money/terra.js';
+import { LCDClient, Coin } from '@terra-money/terra-dart';
 
 // connect to pisco testnet
 const terra = new LCDClient({
@@ -88,7 +88,7 @@ console.log(balance);
 First, [get](https://faucet.terra.money/) some testnet tokens for `terra1x46rqay4d3cssq8gxxvqz8xt6nwlz4td20k38v`, or use [LocalTerra](https://www.github.com/terra-money/LocalTerra).
 
 ```ts
-import { LCDClient, MsgSend, MnemonicKey } from '@terra-money/terra.js';
+import { LCDClient, MsgSend, MnemonicKey } from '@terra-money/terra-dart';
 
 // create a key out of a mnemonic
 const mk = new MnemonicKey({
@@ -122,7 +122,7 @@ const send = new MsgSend(
 wallet
   .createAndSignTx({
     msgs: [send],
-    memo: 'test from terra.js!',
+    memo: 'test from terra-dart!',
   })
   .then(tx => terra.tx.broadcast(tx))
   .then(result => {
@@ -130,24 +130,24 @@ wallet
   });
 ```
 
-## Terra.js in the browser
+## terra-dart in the browser
 
-You can access all the objects of the `@terra-money/terra.js` from the global `Terra` object if you load Terra.js with a `<script>` tag.
+You can access all the objects of the `@terra-money/terra-dart` from the global `Terra` object if you load terra-dart with a `<script>` tag.
 
 Include the following in your browser:
 
 ```html
 <script
   crossorigin
-  src="https://unpkg.com/@terra-money/terra.js/dist/bundle.js"
+  src="https://unpkg.com/@terra-money/terra-dart/dist/bundle.js"
 ></script>
 ```
 
 You can find a small JSFiddle example that refreshes current Oracle votes [here](https://jsfiddle.net/tLm1b527/1/).
 
-## Terra.js in React Native
+## terra-dart in React Native
 
-In order to use Terra.js inside React Native, you need to add the [`node-libs-react-native`](https://github.com/parshap/node-libs-react-native) package and [`react-native-get-random-values`](https://github.com/LinusU/react-native-get-random-values) package to your React Native app's `package.json`.
+In order to use terra-dart inside React Native, you need to add the [`node-libs-react-native`](https://github.com/parshap/node-libs-react-native) package and [`react-native-get-random-values`](https://github.com/LinusU/react-native-get-random-values) package to your React Native app's `package.json`.
 
 ```sh
 yarn add node-libs-react-native react-native-get-random-values
