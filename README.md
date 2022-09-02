@@ -7,7 +7,7 @@
 The Dart SDK for Terra
 </p>
 
-![diagram](https://raw.githubusercontent.com/terra-money/terra-dart/master/img/terrajs-diagram.png)
+![diagram](https://raw.githubusercontent.com/terra-money/terra.js/master/img/terrajs-diagram.png)
 
 <br/>
 
