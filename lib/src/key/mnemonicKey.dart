@@ -1,4 +1,36 @@
+// Adapted from https://github.com/terra-rebels/terra-js/blob/master/src/utils/keyUtils.ts
 
+import * as bip32 from 'bip32';
+import * as bip39 from 'bip39';
+import { RawKey } from './RawKey';
+
+export const LUNA_COIN_TYPE = 330;
+
+interface MnemonicKeyOptions {
+  /**
+   * Space-separated list of words for the mnemonic key.
+   */
+  mnemonic?: string;
+
+  /**
+   * BIP44 account number.
+   */
+  account?: number;
+
+  /**
+   * BIP44 index number
+   */
+  index?: number;
+
+  /**
+   * Coin type. Default is LUNA, 330.
+   */
+  coinType?: number;
+}
+
+const DEFAULT_OPTIONS = {
+  account: 0,
+  index: 0,
   coinType: LUNA_COIN_TYPE,
 };
 
