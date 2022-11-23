@@ -10,11 +10,11 @@ The Official Dart SDK for the Terra Ecosystem (LUNC/USTC/LUNA2)
 
 <p align="center">
   <a href="https://github.com/terra-rebels/terra-dart/blob/main/LICENSE.md">
-  <img alt="GitHub" src="https://img.shields.io/pub/v/grpc">
+  <img alt="GitHub" src="https://img.shields.io/github/license/terra-money/terra.js">
   </a>
 
   <a href="https://www.nuget.org/packages/TerraSharp">
-    <img alt="GitHub" src="https://img.shields.io/nuget/v/TerraSharp">
+  <img alt="GitHub" src="https://img.shields.io/pub/v/grpc">
   </a>
 </p>
 
