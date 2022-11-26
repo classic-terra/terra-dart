@@ -1,6 +1,6 @@
 enum TerraEnvironment {
   classic,
-  lUNA2,
+  luna2MainNet,
   luna2TestNet,
   classicTestNet,
   localTerra

@@ -1,1 +1,7 @@
-class Key {}
+class Key {
+
+void test(){
+  
+}
+
+}

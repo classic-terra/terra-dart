@@ -24,6 +24,7 @@ dependencies:
   bloc: ^8.1.0
   flutter_simple_dependency_injection: ^2.0.0
   grpc: ^3.1.0
+  protobuf_google: ^0.0.1
 
 dev_dependencies:
   lints: ^2.0.0

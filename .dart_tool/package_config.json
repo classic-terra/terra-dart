@@ -14,6 +14,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "archive",
+      "rootUri": "file:///C:/Users/dande/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/archive-3.3.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "args",
       "rootUri": "file:///C:/Users/dande/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/args-2.3.1",
       "packageUri": "lib/",
@@ -128,6 +134,18 @@
       "languageVersion": "2.15"
     },
     {
+      "name": "googleapis_auth",
+      "rootUri": "file:///C:/Users/dande/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/googleapis_auth-1.3.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.13"
+    },
+    {
+      "name": "grpc",
+      "rootUri": "file:///C:/Users/dande/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/grpc-3.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "hash",
       "rootUri": "file:///C:/Users/dande/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/hash-1.0.4",
       "packageUri": "lib/",
@@ -144,6 +162,12 @@
       "rootUri": "file:///C:/Users/dande/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/http-0.13.5",
       "packageUri": "lib/",
       "languageVersion": "2.14"
+    },
+    {
+      "name": "http2",
+      "rootUri": "file:///C:/Users/dande/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/http2-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
     },
     {
       "name": "http_multi_server",
@@ -238,6 +262,12 @@
     {
       "name": "protobuf",
       "rootUri": "file:///C:/Users/dande/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/protobuf-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "protobuf_google",
+      "rootUri": "file:///C:/Users/dande/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/protobuf_google-0.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -392,7 +422,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-09-07T03:57:01.796718Z",
+  "generated": "2022-11-25T20:17:03.208935Z",
   "generator": "pub",
   "generatorVersion": "2.18.0"
 }
