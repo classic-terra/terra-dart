@@ -1,4 +1,3 @@
-import 'package:terra_dart/src/Client/Lcd/Api/AuthzAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/BankAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/DistributionAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/FeeGrantAPI.dart';
@@ -15,12 +14,12 @@ import 'package:terra_dart/src/Client/Lcd/Api/TendermintAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/TreasuryAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/TxBroadcastApi.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/WasmAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Wallet.dart';
-import 'package:terra_dart/src/Key/Extensions/Key.dart';
+import 'package:terra_dart/src/Client/Lcd/lcdClient.dart';
 
-import 'Api/AuthAPI.dart';
+import '../Api/AuthAPI.dart';
+import '../Api/AuthzAPI.dart';
 
-class LcdClient {
+class LocalTerra extends LcdClient {
   final AuthAPI auth;
   final AuthzAPI authz;
   final BankAPI bank;
@@ -40,7 +39,7 @@ class LcdClient {
   final TxBroadcastAPI broadcastTx;
   final WasmAPI wasm;
 
-  LcdClient(
+  LocalTerra(
       this.auth,
       this.authz,
       this.bank,
@@ -58,9 +57,24 @@ class LcdClient {
       this.treasury,
       this.tx,
       this.broadcastTx,
-      this.wasm);
-
-  Wallet createWallet(String walletAddress, Key key) {
-    return Wallet(this, key, walletAddress, broadcastTx);
-  }
+      this.wasm)
+      : super(
+            auth,
+            authz,
+            bank,
+            distribution,
+            feeGrant,
+            gov,
+            ibc,
+            ibcTransfer,
+            market,
+            mint,
+            oracle,
+            slashing,
+            staking,
+            tendermint,
+            treasury,
+            tx,
+            broadcastTx,
+            wasm);
 }

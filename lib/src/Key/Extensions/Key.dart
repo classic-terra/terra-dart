@@ -1,7 +1,3 @@
-class Key {
-
-void test(){
-  
-}
-
+abstract class Key {
+  void test() {}
 }

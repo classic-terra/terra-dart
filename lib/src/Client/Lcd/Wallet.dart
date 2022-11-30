@@ -3,7 +3,12 @@ import 'package:terra_dart/src/Client/Lcd/LCDClient.dart';
 import 'package:terra_dart/src/Key/Extensions/Key.dart';
 
 class Wallet {
-  Wallet(LcdClient lcd, Key key, String accAddress, TxBroadcastAPI broadcastTx);
+  final LcdClient lcd;
+  final Key key;
+  final String accAddress;
+  final TxBroadcastAPI broadcastTx;
+
+  Wallet(this.lcd, this.key, this.accAddress, this.broadcastTx);
 
   Future<Map<double, double>> getAccountNumberAndSequence() {
     throw new Exception();

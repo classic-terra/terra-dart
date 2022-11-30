@@ -8,7 +8,6 @@ environment:
 
 dependencies:
   path: ^1.8.0
-  node_interop: ^2.1.0
   buffer: ^1.1.1
   http: ^0.13.5
   bech32: ^0.2.1
@@ -19,10 +18,8 @@ dependencies:
   secp256k1: ^0.3.0
   validated: ^2.0.0
   protobuf: ^2.1.0
-  web_socket_channel: ^2.2.0
   hash: ^1.0.4
-  bloc: ^8.1.0
-  flutter_simple_dependency_injection: ^2.0.0
+  injector: ^2.0.0
   grpc: ^3.1.0
   protobuf_google: ^0.0.1
 
