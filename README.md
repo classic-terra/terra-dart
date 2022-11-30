@@ -16,6 +16,11 @@ The Official Dart SDK for the Terra Ecosystem (LUNC/USTC/LUNA2)
   <a href="https://www.nuget.org/packages/TerraSharp">
   <img alt="GitHub" src="https://img.shields.io/pub/v/grpc">
   </a>
+  
+  
+  <a href="https://www.nuget.org/packages/TerraSharp">
+  <img alt="GitHub" src="https://img.shields.io/pub/likes/grpc?color=red">
+  </a>
 </p>
 
 <p align="center">
