@@ -11,6 +11,7 @@ import 'Constants/Classic/ClassicHttpResources.dart';
 import 'Constants/Http/httpBehaviourConstants.dart';
 import 'Constants/Luna2/luna2ChainKeys.dart';
 import 'Constants/Luna2/luna2ResourceUrls.dart';
+import 'Modules/terraHttpDIModule.dart';
 
 class TerraStartup {
   static final injector = Injector.appInstance;
@@ -26,6 +27,7 @@ class TerraStartup {
 
   static void loadAllModules() {
     TerraMainDIModule.load();
+    TerraHttpDIModule.load();
   }
 
   static LcdClient getLCDClient() {
