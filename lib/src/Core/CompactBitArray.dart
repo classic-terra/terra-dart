@@ -34,7 +34,7 @@ class CompactBitArray
             return (elems.length - 1) * 8 + this.extra_bits_stored;
         }
 
-         bool GetIndex(int i)
+         bool getIndex(int i)
         {
             if (i < 0 || i >= count())
             {
@@ -47,7 +47,7 @@ class CompactBitArray
             }
         }
 
-         bool SetIndex(int i, bool v)
+         bool setIndex(int i, bool v)
         {
             if (i < 0 || i >= this.Count())
             {
@@ -56,17 +56,17 @@ class CompactBitArray
 
             if (v)
             {
-                this.elems[i >> 3] |= (byte)(1 << (7 - (i % 8)));
+                elems[i >> 3] |= (byte)(1 << (7 - (i % 8)));
             }
             else
             {
-                this.elems[i >> 3] &= (byte)~(1 << (7 - (i % 8)));
+                elems[i >> 3] &= (byte)~(1 << (7 - (i % 8)));
             }
 
             return true;
         }
 
-         double NumTrueBitsBefore(long index)
+         double numTrueBitsBefore(double index)
         {
             var countOneBits = new Func<byte, int>((n) =>
             {
@@ -74,38 +74,38 @@ class CompactBitArray
             });
 
             int ones_count = 0;
-            var max = this.Count();
+            var max = count();
             if (index > max)
             {
                 index = max;
             }
 
-            for (int elem = 0; elem < this.elems.Length; elem++)
+            for (int elem = 0; elem < elems.length; elem++)
             {
                 if ((elem * 8 + 7) >= index)
                 {
-                    var offset = (byte)(this.elems[elem] >> (7 - ((byte)index % 8) + 1));
+                    var offset = (byte)(elems[elem] >> (7 - ((byte)index % 8) + 1));
                     return (ones_count += countOneBits(offset));
                 }
 
-                ones_count += countOneBits(this.elems[elem]);
+                ones_count += countOneBits(elems[elem]);
             }
 
             return ones_count;
         }
 
-         static CompactBitArray FromProto(COMB.CompactBitArray proto)
-        {
-            return new CompactBitArray(proto.ExtraBitsStored, proto.Elems);
-        }
-         static CompactBitArray FromProto(TerraProto.CSharp.third_party.proto.cosmos.tx.signing.v1beta1.CompactBitArray proto)
-        {
-            return new CompactBitArray(proto.ExtraBitsStored, proto.Elems);
-        }
+        //  static CompactBitArray FromProto(COMB.CompactBitArray proto)
+        // {
+        //     return new CompactBitArray(proto.ExtraBitsStored, proto.Elems);
+        // }
+        //  static CompactBitArray FromProto(TerraProto.CSharp.third_party.proto.cosmos.tx.signing.v1beta1.CompactBitArray proto)
+        // {
+        //     return new CompactBitArray(proto.ExtraBitsStored, proto.Elems);
+        // }
 
-         static CompactBitArray FromData(CompactBitArrayData data)
+         static CompactBitArray fromData(CompactBitArrayData data)
         {
-            return new CompactBitArray(data.ExtraBitsStored, TerraStringExtensions.GetBytesFromString(TerraStringExtensions.GetBase64FromString(data.Elems)));
+            return CompactBitArray(data.extraBitsStored, TerraStringExtensions.GetBytesFromString(TerraStringExtensions.GetBase64FromString(data.Elems)));
         }
 
          CompactBitArrayData ToData()

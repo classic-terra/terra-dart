@@ -1,4 +1,4 @@
-import 'package:terra_dart/src/Core/Coin.dart';
+import 'package:terra_dart/src/Core/coin.dart';
 
 import '../../rest/Json/CoinJSON.dart';
 

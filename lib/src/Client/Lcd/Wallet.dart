@@ -11,14 +11,14 @@ class Wallet {
   Wallet(this.lcd, this.key, this.accAddress, this.broadcastTx);
 
   Future<Map<double, double>> getAccountNumberAndSequence() {
-    throw new Exception();
+    throw Exception();
   }
 
   Future<double> getAccountNumber() {
-    throw new Exception();
+    throw Exception();
   }
 
   Future<double> getSequence() {
-    throw new Exception();
+    throw Exception();
   }
 }
