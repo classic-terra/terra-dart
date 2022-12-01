@@ -1,7 +1,7 @@
  class AuthInfo
     {
          List<SignerInfo>? signer_infos;
-        public readonly Fee fee;
+         readonly Fee fee;
 
         public AuthInfo(
             List<SignerInfo>? signer_infos,

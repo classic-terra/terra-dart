@@ -1,147 +1,127 @@
-   class Coin extends INumeric<Coin, object>
-    {
-        private const string COIN_REGEX = "/^(-?[0-9]+(\\.[0-9]+)?)([0-9a-zA-Z/]+)$/";
+import '../rest/Json/CoinJSON.dart';
+import 'Numeric.dart';
 
-        public readonly double amount;
-        public readonly string denom;
+class Coin implements Numeric<Coin, dynamic> {
+  final double? amount;
+  final String? denom;
 
+  Coin(this.denom, this.amount);
 
-        public Coin(string denom, double amount)
-        {
-            this.denom = denom;
-            this.amount = amount;
-        }
+  static Coin fromAmino(CoinAminoArgs data) {
+    return Coin(data.denom, data.amount);
+  }
 
-        public static Coin FromAmino(CoinAminoArgs data)
-        {
-            return new Coin(data.Denom, data.Amount);
-        }
+  static Coin fromData(CoinDataArgs data) {
+    return Coin(data.denom, data.amount);
+  }
 
-        public static Coin FromData(CoinDataArgs data)
-        {
-            return new Coin(data.Denom, data.Amount);
-        }
-        public static Coin FromJSON(CoinJSON data)
-        {
-            return new Coin(data.Denom, double.Parse(data.Amount));
-        }
+  static Coin fromJSON(CoinJSON data) {
+    return Coin(data.denom, data.amount);
+  }
 
-        public static Coin FromProto(COMB.Coin data)
-        {
-            return null;
-        }
+  //  static Coin FromProto(COMB.Coin data)
+  // {
+  //     return null;
+  // }
 
-        public CoinDataArgs ToData()
-        {
-            return new CoinDataArgs()
-            {
-                Denom = this.denom,
-                Amount = this.amount,
-            };
-        }
+  CoinDataArgs toData() {
+    return CoinDataArgs()
+      ..denom = denom
+      ..amount = amount;
+  }
 
-        public byte[] ToProto()
-        {
-            return ProtoExtensions.SerialiseFromData<CCF.Coin>(new CCF.Coin()
-            {
-                Amount = this.amount.ToString(),
-                Denom = this.denom
-            });
-        }
-        public CCF.Coin ToProtoWithType()
-        {
-            return new CCF.Coin()
-            {
-                Amount = this.amount.ToString(),
-                Denom = this.denom
-            };
-        }
+  //  Uint8List[] toProto()
+  // {
+  //     return ProtoExtensions.SerialiseFromData<CCF.Coin>(new CCF.Coin()
+  //     {
+  //         Amount = amount.ToString(),
+  //         Denom = denom
+  //     });
+  // }
 
-        public CoinAminoArgs ToAmino()
-        {
-            return new CoinAminoArgs()
-            {
-                Denom = this.denom,
-                Amount = this.amount,
-            };
-        }
-        public CoinJSON ToJSON()
-        {
-            return new CoinJSON()
-            {
-                Denom = this.denom,
-                Amount = this.amount.ToString(),
-            };
-        }
+  //  CCF.Coin ToProtoWithType()
+  // {
+  //     return new CCF.Coin()
+  //     {
+  //         Amount = amount.ToString(),
+  //         Denom = denom
+  //     };
+  // }
 
-        public Coin ToLongCoin()
-        {
-            return new Coin(this.denom, this.amount);
-        }
+  CoinAminoArgs toAmino() {
+    return CoinAminoArgs()
+      ..denom = denom
+      ..amount = amount;
+  }
 
-        public Coin ToLongCeilCoin()
-        {
-            return new Coin(this.denom, Math.Ceiling(this.amount));
-        }
+  CoinJSON toJSON() {
+    return CoinJSON()
+      ..denom = denom
+      ..amount = amount;
+  }
 
-        public Coin ToDecCoin()
-        {
-            return new Coin(this.denom, this.amount);
-        }
+  Coin toLongCoin() {
+    return Coin(denom, amount);
+  }
 
-        public override string ToString()
-        {
-            return $"{this.amount}{this.denom}";
-        }
+  Coin toLongCeilCoin() {
+    return Coin(denom, (amount));
+  }
 
-        public static Coin FromString(string str)
-        {
-            bool m = Regex.IsMatch(str, COIN_REGEX);
-            if (!m)
-            {
-                throw new Exception($"failed to parse to Coin: ${str}");
-            }
+  Coin toDecCoin() {
+    return Coin(denom, amount);
+  }
 
-            var amount = double.Parse(str.ElementAt(1).ToString());
-            var denom = str.ElementAt(3).ToString();
+  @override
+  String toString() {
+    return "$amount$denom";
+  }
 
-            return new Coin(denom, amount);
-        }
-
-        public Coin Add(object value)
-        {
-            return new Coin(this.denom, this.amount + (double)value);
-        }
-
-        public Coin Sub(object value)
-        {
-            return new Coin(this.denom, this.amount - (double)value);
-        }
-
-        public Coin Mul(object value)
-        {
-            return new Coin(this.denom, this.amount * (double)value);
-        }
-
-        public Coin Div(object value)
-        {
-            return new Coin(this.denom, this.amount / (double)value);
-        }
-
-        public Coin Mod(object value)
-        {
-            return new Coin(this.denom, Math.Abs((double)value));
-        }
+  static Coin fromString(String str) {
+    final String coinRegex = r"/^(-?[0-9]+(\\.[0-9]+)?)([0-9a-zA-Z/]+)$/";
+    bool m = RegExp(coinRegex).hasMatch(str);
+    if (!m) {
+      throw Exception("failed to parse to Coin: $str");
     }
 
-    public class CoinAminoArgs
-    {
-        public string Denom { get; set; }
-        public double Amount { get; set; }
-    }
+    var amount = double.parse(str[1]);
+    var denom = str[3];
 
-    public class CoinDataArgs
-    {
-        public string Denom { get; set; }
-        public double Amount { get; set; }
-    }
+    return Coin(denom, amount);
+  }
+
+  @override
+  Coin add(value) {
+    return Coin(denom, amount! + double.parse(value));
+  }
+
+  @override
+  Coin div(value) {
+    return Coin(denom, amount! / double.parse(value));
+  }
+
+  @override
+  Coin mod(value) {
+    return Coin(denom, double.parse(value).abs());
+  }
+
+  @override
+  Coin mul(value) {
+    return Coin(denom, amount! * double.parse(value));
+  }
+
+  @override
+  Coin sub(value) {
+    return Coin(denom, amount! - double.parse(value));
+  }
+}
+
+class CoinAminoArgs {
+  String? denom;
+  double? amount;
+}
+
+class CoinDataArgs {
+  String? denom;
+  double? amount;
+}

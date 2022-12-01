@@ -1,4 +1,4 @@
 class CoinJSON {
   String? denom;
-  String? amount;
+  double? amount;
 }

@@ -1,9 +1,21 @@
 class Numeric<T, R> {
-  T add(R value){
-    throw notim
+  T add(R value) {
+    throw Exception("Logic not implemented yet");
   }
-  T sub(R value);
-  T mul(R value);
-  T div(R value);
-  T mod(R value);
+
+  T sub(R value) {
+    throw Exception("Logic not implemented yet");
+  }
+
+  T mul(R value) {
+    throw Exception("Logic not implemented yet");
+  }
+
+  T div(R value) {
+    throw Exception("Logic not implemented yet");
+  }
+
+  T mod(R value) {
+    throw Exception("Logic not implemented yet");
+  }
 }
