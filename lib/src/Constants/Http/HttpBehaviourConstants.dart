@@ -1,3 +1,3 @@
 class HttpBehaviourConstants {
-  static int DefaultHttpTimeoutSeconds = 120;
+  static int? defaultHttpTimeoutSeconds;
 }

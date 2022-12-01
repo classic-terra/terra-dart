@@ -22,6 +22,10 @@ dependencies:
   injector: ^2.0.0
   grpc: ^3.1.0
   protobuf_google: ^0.0.1
+  proto_annotations: ^2.1.2
+  string_extensions: ^0.6.5
+  json_annotation: ^4.7.0
+  json_serializable: ^6.5.4
 
 dev_dependencies:
   lints: ^2.0.0

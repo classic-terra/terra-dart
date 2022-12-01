@@ -8,6 +8,6 @@ class TerraHttpDIModule {
 
   static void _registerHttpServices() {
     // Register Http Client & Handler
-    TerraStartup.injector.registerSingleton<AuthAPI>(() => AuthAPI());
+    TerraStartup.injector.registerSingleton<AuthAPI>(() => AufthAPI());
   }
 }

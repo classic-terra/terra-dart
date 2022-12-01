@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:terra_dart/src/Client/Lcd/Api/AuthzAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/BankAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/DistributionAPI.dart';

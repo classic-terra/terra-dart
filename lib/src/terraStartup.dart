@@ -20,7 +20,7 @@ class TerraStartup {
   static void initializeKernel(TerraEnvironment environment,
       {int httpClientTimeoutSeconds = 120}) {
     configureTerraEnvironment(environment);
-    HttpBehaviourConstants.DefaultHttpTimeoutSeconds = httpClientTimeoutSeconds;
+    HttpBehaviourConstants.defaultHttpTimeoutSeconds = httpClientTimeoutSeconds;
 
     loadAllModules(); // Load all modules for dependency injection
   }
