@@ -28,7 +28,7 @@ class TerraMainDIModule {
   }
 
   static void _registerApiServices() {
-    TerraStartup.injector.registerSingleton<AuthAPI>(() => AuthAPI());
+    //TerraStartup.injector.registerSingleton<AuthAPI>(() => AuthAPI());
     TerraStartup.injector.registerSingleton<AuthzAPI>(() => AuthzAPI());
     TerraStartup.injector.registerSingleton<BankAPI>(() => BankAPI());
     TerraStartup.injector

@@ -383,7 +383,7 @@ packages:
     source: hosted
     version: "4.7.0"
   json_serializable:
-    dependency: "direct main"
+    dependency: "direct dev"
     description:
       name: json_serializable
       sha256: f3c2c18a7889580f71926f30c1937727c8c7d4f3a435f8f5e8b0ddd25253ef5d
@@ -502,14 +502,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.0.1"
-  protoc_builder:
-    dependency: "direct dev"
-    description:
-      name: protoc_builder
-      sha256: "06b6faa337fddcd5d5ed68d23584930ef826e3348876b9603b760722118d4eeb"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.3.0"
   pub_semver:
     dependency: transitive
     description:

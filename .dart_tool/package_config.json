@@ -380,12 +380,6 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "protoc_builder",
-      "rootUri": "file:///C:/Users/dande/AppData/Local/Pub/Cache/hosted/pub.dev/protoc_builder-0.3.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
       "name": "pub_semver",
       "rootUri": "file:///C:/Users/dande/AppData/Local/Pub/Cache/hosted/pub.dev/pub_semver-2.1.3",
       "packageUri": "lib/",
@@ -590,7 +584,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-12-01T21:55:21.866721Z",
+  "generated": "2022-12-02T13:47:31.989820Z",
   "generator": "pub",
   "generatorVersion": "2.19.0-443.0.dev"
 }

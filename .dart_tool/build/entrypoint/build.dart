@@ -1,27 +1,40 @@
 // ignore_for_file: directives_ordering
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:build_runner_core/build_runner_core.dart' as _i1;
-import 'package:protoc_builder/protoc_builder.dart' as _i2;
-import 'dart:isolate' as _i3;
-import 'package:build_runner/build_runner.dart' as _i4;
-import 'dart:io' as _i5;
+import 'package:json_serializable/builder.dart' as _i2;
+import 'package:source_gen/builder.dart' as _i3;
+import 'dart:isolate' as _i4;
+import 'package:build_runner/build_runner.dart' as _i5;
+import 'dart:io' as _i6;
 
 final _builders = <_i1.BuilderApplication>[
   _i1.apply(
-    r'protoc_builder:protoc_builder',
-    [_i2.getBuilder],
-    _i1.toDependentsOf(r'protoc_builder'),
+    r'json_serializable:json_serializable',
+    [_i2.jsonSerializable],
+    _i1.toDependentsOf(r'json_serializable'),
     hideOutput: true,
-  )
+    appliesBuilders: const [r'source_gen:combining_builder'],
+  ),
+  _i1.apply(
+    r'source_gen:combining_builder',
+    [_i3.combiningBuilder],
+    _i1.toNoneByDefault(),
+    hideOutput: false,
+    appliesBuilders: const [r'source_gen:part_cleanup'],
+  ),
+  _i1.applyPostProcess(
+    r'source_gen:part_cleanup',
+    _i3.partCleanup,
+  ),
 ];
 void main(
   List<String> args, [
-  _i3.SendPort? sendPort,
+  _i4.SendPort? sendPort,
 ]) async {
-  var result = await _i4.run(
+  var result = await _i5.run(
     args,
     _builders,
   );
   sendPort?.send(result);
-  _i5.exitCode = result;
+  _i6.exitCode = result;
 }

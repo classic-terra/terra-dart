@@ -27,7 +27,7 @@ class TerraStartup {
 
   static void loadAllModules() {
     TerraMainDIModule.load();
-    TerraHttpDIModule.load();
+    //TerraHttpDIModule.load();
   }
 
   static LcdClient getLCDClient() {

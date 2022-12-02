@@ -63,6 +63,8 @@ class LcdClient {
       this.wasm);
 
   Wallet createWallet(String walletAddress, Key key) {
-    return Wallet(this, key, walletAddress, broadcastTx);
+    // return Wallet(this, key, walletAddress, broadcastTx);
+
+    throw new Exception();
   }
 }

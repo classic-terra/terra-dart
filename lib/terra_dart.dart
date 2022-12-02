@@ -5,7 +5,7 @@ library terra_dart;
 
 import 'package:terra_dart/src/Constants/Classic/classicHttpResources.dart';
 
-export 'src/terra_dart_base.dart';
+//export 'src/terra_dart_base.dart';
 
 
 // TODO: Export any libraries intended for clients of this package.

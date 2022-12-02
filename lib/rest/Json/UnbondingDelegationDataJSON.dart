@@ -5,3 +5,5 @@ class UnbondingDelegationDataJSON {
   String? Delegator_Address;
   String? Validator_Address;
 }
+
+
