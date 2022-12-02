@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 import '../CoinJSON.dart';
-import '../FeeGrant/FeeGrantAllowances.dart';
+import '../FeeGrant/FeeGrantAllowancesJson.dart';
 import '../PaginationJson.dart';
 
 part 'GovAPIAPIJson.g.dart';

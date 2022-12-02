@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 import '../CommonTypeValueArgs.dart';
-import 'FeeGrantAllowances.dart';
+import 'FeeGrantAllowancesJson.dart';
 
 part 'FeeGrantAllowancesContainer.g.dart';
 

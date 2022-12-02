@@ -1,7 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 import '../CoinJSON.dart';
 import '../PaginationJson.dart';
-import 'FeeGrantAllowances.dart';
+import 'FeeGrantAllowancesJson.dart';
 
 part 'FeeGrantAPIJson.g.dart';
 
