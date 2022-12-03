@@ -1,6 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'BlockInfo.dart';
 import 'DuplicateVoteEvidenceVote.dart';
 
 part 'DuplicateVoteEvidence.g.dart';

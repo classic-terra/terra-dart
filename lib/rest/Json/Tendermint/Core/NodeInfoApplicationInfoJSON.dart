@@ -1,5 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
+import 'NodeInfoBuildDepsJSON.dart';
+
 part 'NodeInfoApplicationInfoJSON.g.dart';
 
 @JsonSerializable()

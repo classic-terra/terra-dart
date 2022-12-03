@@ -1,5 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
+import '../../enums/BroadcastMode.dart';
+
 part 'BlockTxBroadcastResult.g.dart';
 
 @JsonSerializable()

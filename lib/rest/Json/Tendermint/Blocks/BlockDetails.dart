@@ -1,9 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'BlockDetailsValue.dart';
 import 'BlockEvidence.dart';
 import 'BlockHeader.dart';
 import 'BlockHeaderCommit.dart';
+import 'BlockTxs.dart';
 
 part 'BlockDetails.g.dart';
 

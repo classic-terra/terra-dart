@@ -1,10 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import 'BlockContainerValue.dart';
 import 'BlockDetails.dart';
-import 'BlockEvidence.dart';
-import 'BlockHeader.dart';
-import 'BlockHeaderCommit.dart';
 import 'BlockInfo.dart';
 
 part 'BlockContainer.g.dart';
