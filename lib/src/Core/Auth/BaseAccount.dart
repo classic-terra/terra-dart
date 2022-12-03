@@ -1,5 +1,5 @@
 import 'package:terra_dart/src/Core/Auth/SharedAccounts.dart';
-import '../../Client/Lcd/Api/Args/Auth/KeysDto.dart';
+import '../../../proto/terra/keys/KeysDto.dart';
 import '../Constants/AccountsConstants.dart';
 import '../Constants/CosmosConstants.dart';
 

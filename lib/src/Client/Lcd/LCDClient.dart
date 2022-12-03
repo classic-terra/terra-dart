@@ -1,26 +1,24 @@
 import 'dart:convert';
 
-import 'package:terra_dart/src/Client/Lcd/Api/AuthzAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/BankAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/DistributionAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/FeeGrantAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/GovAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/IBCAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/IBCTransferAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/MarketAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/MintAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/OracleAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/SlashingAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/StakingAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/TXAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/TendermintAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/TreasuryAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/TxBroadcastApi.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/WasmAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/authAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/authzAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/bankAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/distributionAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/feeGrantAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/govAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/ibcAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/ibcTransferAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/marketAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/mintAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/oracleAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/slashingAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/stakingAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/tXAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/tendermintAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/treasuryAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/txBroadcastApi.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/wasmAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Wallet.dart';
-import 'package:terra_dart/src/Key/Extensions/Key.dart';
-
-import 'Api/AuthAPI.dart';
 
 class LcdClient {
   final AuthAPI auth;
@@ -62,9 +60,7 @@ class LcdClient {
       this.broadcastTx,
       this.wasm);
 
-  Wallet createWallet(String walletAddress, Key key) {
-    // return Wallet(this, key, walletAddress, broadcastTx);
-
-    throw new Exception();
+  Wallet createWallet(String walletAddress) {
+    return Wallet(this, walletAddress, broadcastTx);
   }
 }

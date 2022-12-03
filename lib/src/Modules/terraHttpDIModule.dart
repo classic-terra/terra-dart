@@ -1,13 +1,19 @@
-// import '../Client/Lcd/Api/AuthAPI.dart';
-// import '../TerraStartup.dart';
+import 'package:terra_dart/rest/services/terraHttpClientHandler.dart';
+import 'package:terra_dart/rest/services/terraRestfulService.dart';
 
-// class TerraHttpDIModule {
-//   static void load() {
-//     _registerHttpServices();
-//   }
+import '../Client/Lcd/Api/AuthAPI.dart';
+import '../TerraStartup.dart';
 
-//   static void _registerHttpServices() {
-//     // Register Http Client & Handler
-//     TerraStartup.injector.registerSingleton<AuthAPI>(() => AufthAPI());
-//   }
-// }
+class TerraHttpDIModule {
+  static void load() {
+    _registerHttpServices();
+  }
+
+  static void _registerHttpServices() {
+    TerraStartup.injector.registerSingleton<TerraHttpClientHandler>(
+        () => TerraHttpClientHandler());
+    TerraStartup.injector.registerSingleton<TerraRestfulService>(() =>
+        TerraRestfulService(
+            TerraStartup.injector.get<TerraHttpClientHandler>()));
+  }
+}

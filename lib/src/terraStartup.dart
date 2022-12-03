@@ -1,10 +1,10 @@
 import 'package:injector/injector.dart';
-import 'package:terra_dart/src/Client/Lcd/LocalTerra/localTerra.dart';
 import 'package:terra_dart/src/Configuration/Environment/TerraEnvironment.dart';
 import 'package:terra_dart/src/Modules/terraMainDIModule.dart';
-import 'Client/Lcd/LCDClient.dart';
 import 'Client/Lcd/LCDDefaultConfigs.dart';
+import 'Client/Lcd/LocalTerra/localTerra.dart';
 import 'Client/Lcd/Models/LCDClientConfig.dart';
+import 'Client/Lcd/lcdClient.dart';
 import 'Configuration/Environment/TerraClientConfiguration.dart';
 import 'Constants/Classic/ClassicChainKeys.dart';
 import 'Constants/Classic/ClassicHttpResources.dart';
@@ -26,8 +26,8 @@ class TerraStartup {
   }
 
   static void loadAllModules() {
+    TerraHttpDIModule.load();
     TerraMainDIModule.load();
-    //TerraHttpDIModule.load();
   }
 
   static LcdClient getLCDClient() {

@@ -1,4 +1,4 @@
-import '../../Client/Lcd/Api/Args/Auth/KeysDto.dart';
+import '../../../proto/terra/keys/KeysDto.dart';
 
 abstract class SharedAccounts {
   double getAccountNumber();

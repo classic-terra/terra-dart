@@ -1,24 +1,26 @@
-import 'package:terra_dart/src/Client/Lcd/Api/TxBroadcastApi.dart';
-import 'package:terra_dart/src/Client/Lcd/LCDClient.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/txBroadcastApi.dart';
+import 'package:terra_dart/src/Client/Lcd/lcdClient.dart';
 import 'package:terra_dart/src/Key/Extensions/Key.dart';
 
 class Wallet {
   final LcdClient lcd;
-  final Key key;
+  //final Key key;
   final String accAddress;
   final TxBroadcastAPI broadcastTx;
 
-  Wallet(this.lcd, this.key, this.accAddress, this.broadcastTx);
+  Wallet(this.lcd, this.accAddress, this.broadcastTx);
 
   Future<Map<double, double>> getAccountNumberAndSequence() {
     throw Exception();
   }
 
-  Future<double> getAccountNumber() {
-    throw Exception();
+  Future<int> getAccountNumber() async {
+    var response = await lcd.auth.getAccountInfoWalletAddress(accAddress);
+    return response.account_number;
   }
 
-  Future<double> getSequence() {
-    throw Exception();
+  Future<int> getSequence() async {
+    var response = await lcd.auth.getAccountInfoWalletAddress(accAddress);
+    return response.sequence;
   }
 }
