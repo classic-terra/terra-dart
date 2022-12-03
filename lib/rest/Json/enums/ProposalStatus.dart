@@ -1,5 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'ProposalStatus.g.dart';
+
 @JsonEnum()
 enum ProposalStatus {
   @JsonValue(0)

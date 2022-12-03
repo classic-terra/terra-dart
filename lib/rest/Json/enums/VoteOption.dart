@@ -1,5 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'VoteOption.g.dart';
+
 @JsonEnum()
 enum VoteOption {
   @JsonValue(0)

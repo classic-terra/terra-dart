@@ -1,7 +1,9 @@
 import 'package:json_annotation/json_annotation.dart';
 
+part 'OrderBy.g.dart';
+
 @JsonEnum()
-enum Order {
+enum OrderBy {
   @JsonValue(0)
   OrderNoneUnspecified,
   @JsonValue(1)
