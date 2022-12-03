@@ -36,15 +36,15 @@ The Official Dart SDK for the Terra Ecosystem (LUNC/USTC/LUNA2)
   <a href="https://github.com/terra-rebels/Terra-Sharp">GitHub</a>
 </p>
 
-TerraSharp is a C# SDK for writing applications that interact with the Terra blockchain from either the Web or Mobile, or .net environments and provides simple abstractions over core data structures, serialization, key management, and API request generation.
+TerraDart is a Dart SDK for writing applications that interact with the Terra blockchain from either the Web or Mobile, or flutter environments and provides simple abstractions over core data structures, serialization, key management, and API request generation.
 
 ## Features
 
-- **Written in C#**, with type definitions
+- **Written in Dart**, with type definitions
 - Versatile support for [key management](https://docs.terra.money/develop/terra-js/keys) solutions
-- Works with Xamarin, MAUI, in the browser, and Mobile
+- Works with the Flutter Ecosystem, in the browser, and Mobile
 - Exposes the Terra API through [`LCDClient`](https://docs.terra.money/develop/terra-js/getting-started#2-initialize-the-lcd)
-- Parses responses into native C# types
+- Parses responses into native Dart types
 
 We highly suggest using TerraSharp in a code editor that has support for type declarations, so you can take advantage of the helpful type hints that are included with the package.
 
