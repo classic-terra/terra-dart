@@ -12,7 +12,7 @@ class BankAPI extends BaseAPI {
 
   Future<List<Coin>> getBalance(String walletAddress) async {
     String root =
-        "${TerraClientConfiguration.blockchainResourcePath}/${CosmosBaseConstants.COSMOS_BANK_BALANCES}/$walletAddress";
+        "${TerraClientConfiguration.blockchainResourcePath}${CosmosBaseConstants.COSMOS_BANK_BALANCES}/$walletAddress";
 
     var response = await apiRequester.getAsync<BankInfoApiJson>(root);
     if (response.successful!) {
@@ -27,7 +27,7 @@ class BankAPI extends BaseAPI {
 
   Future<List<Coin>> getTotalSupply() async {
     String root =
-        "${TerraClientConfiguration.blockchainResourcePath}/${CosmosBaseConstants.COSMOS_BANK_SUPPLY}";
+        "${TerraClientConfiguration.blockchainResourcePath}${CosmosBaseConstants.COSMOS_BANK_SUPPLY}";
 
     var response = await apiRequester.getAsync<BankInfoApiJson>(root);
     if (response.successful!) {

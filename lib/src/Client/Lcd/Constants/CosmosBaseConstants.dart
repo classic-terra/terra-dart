@@ -122,4 +122,7 @@ class CosmosBaseConstants {
   static final String COSMOS_WASM_CODES = "/terra/wasm/v1beta1/codes";
   static final String COSMOS_WASM_CONTRACTS = "/terra/wasm/v1beta1/contracts";
   static final String COSMOS_WASM_PARAMS = "/terra/wasm/v1beta1/params";
+
+  // Gas Prices
+  static final String GAS_PRICES = "https://fcd.terra.dev/v1/txs/gas_prices";
 }

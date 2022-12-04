@@ -35,8 +35,9 @@ class TerraMainDIModule {
     TerraStartup.injector.registerSingleton<BankAPI>(() => BankAPI(http));
     TerraStartup.injector
         .registerSingleton<DistributionAPI>(() => DistributionAPI(http));
-    TerraStartup.injector.registerSingleton<FeeGrantAPI>(() => FeeGrantAPI());
-    TerraStartup.injector.registerSingleton<GovAPI>(() => GovAPI());
+    TerraStartup.injector
+        .registerSingleton<FeeGrantAPI>(() => FeeGrantAPI(http));
+    TerraStartup.injector.registerSingleton<GovAPI>(() => GovAPI(http));
     TerraStartup.injector.registerSingleton<IBCAPI>(() => IBCAPI());
     TerraStartup.injector
         .registerSingleton<IBCTransferAPI>(() => IBCTransferAPI());

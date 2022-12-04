@@ -11,16 +11,17 @@ class WeightedVoteOption {
     return WeightedVoteOption(data.option!, double.parse(data.weight!));
   }
 
-  static WeightedVoteOption fromJSON(WeightedOptionsJSON data) {
-    return WeightedVoteOption(VoteOptionConverters.GetFromString(data.option),
-        double.parse(data.weight));
-  }
+  // static WeightedVoteOption fromJSONWithWeightedOption(
+  //     WeightedOptionsJSON data) {
+  //   return WeightedVoteOption(VoteOptionConverters.GetFromString(data.option),
+  //       double.parse(data.weight));
+  // }
 
   static WeightedVoteOption fromData(WeightedVoteDataArgs data) {
     return WeightedVoteOption(data.option!, double.parse(data.weight!));
   }
 
-  static WeightedVoteOption fromJSON(VoteOptionJSON data) {
+  static WeightedVoteOption fromJSONWithOption(VoteOptionJSON data) {
     return WeightedVoteOption(data.option, double.parse(data.weight));
   }
 

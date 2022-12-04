@@ -1,3 +1,6 @@
+import 'package:terra_dart/rest/Json/Gov/Proposals/VoteOptionJSON.dart';
+import 'package:terra_dart/rest/Json/enums/VoteOption.dart';
+
 import '../../../rest/Json/Gov/Proposals/VotesJSON.dart';
 import 'WeightedVoteOption.dart';
 
@@ -21,7 +24,7 @@ class Vote {
         data.proposal_id,
         data.voter,
         data.options!
-            .map((e) => e.)
+            .map((e) => WeightedVoteOption.fromJSONWithOption(e))
             .toList());
   }
 

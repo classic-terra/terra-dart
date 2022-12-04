@@ -15,7 +15,7 @@ class FeeGrantAPI extends BaseAPI {
   Future<List<FeeGrantAllowancesJson>> getAllowances(
       String walletGrantee) async {
     String root =
-        "${TerraClientConfiguration.blockchainResourcePath}/${CosmosBaseConstants.COSMOS_FEEGRANT_ALLOWANCES}/$walletGrantee";
+        "${TerraClientConfiguration.blockchainResourcePath}${CosmosBaseConstants.COSMOS_FEEGRANT_ALLOWANCES}/$walletGrantee";
 
     var response =
         await apiRequester.getAsync<FeeGrantAllowancesContainer>(root);
@@ -29,7 +29,7 @@ class FeeGrantAPI extends BaseAPI {
   // Future<PeriodicAllowance> getPeriodicAllowance(
   //     String walletGrantee, String walletGranter) async {
   //   String root =
-  //       "${TerraClientConfiguration.blockchainResourcePath}/${CosmosBaseConstants.COSMOS_FEEGRANT_ALLOWANCE}/$walletGranter/$walletGrantee";
+  //       "${TerraClientConfiguration.blockchainResourcePath}${CosmosBaseConstants.COSMOS_FEEGRANT_ALLOWANCE}/$walletGranter/$walletGrantee";
 
   //   var response =
   //       await apiRequester.getAsync<FeeGrantAllowancesContainer>(root);
@@ -44,7 +44,7 @@ class FeeGrantAPI extends BaseAPI {
 //   Future<BasicAllowance> getBasicAllowance(
 //       String walletGrantee, String walletGranter) async {
 //     String root =
-//         "${TerraClientConfiguration.blockchainResourcePath}/${CosmosBaseConstants.COSMOS_FEEGRANT_ALLOWANCE}/$walletGranter/$walletGrantee";
+//         "${TerraClientConfiguration.blockchainResourcePath}${CosmosBaseConstants.COSMOS_FEEGRANT_ALLOWANCE}/$walletGranter/$walletGrantee";
 
 //     var response =
 //         await apiRequester.getAsync<FeeGrantAllowancesContainer>(root);

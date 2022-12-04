@@ -7,7 +7,7 @@ part of 'VotesJSON.dart';
 // **************************************************************************
 
 VotesJSON _$VotesJSONFromJson(Map<String, dynamic> json) => VotesJSON(
-      json['proposal_id'] as int,
+      (json['proposal_id'] as num).toDouble(),
       json['voter'] as String,
       $enumDecode(_$VoteOptionEnumMap, json['option']),
       (json['options'] as List<dynamic>)

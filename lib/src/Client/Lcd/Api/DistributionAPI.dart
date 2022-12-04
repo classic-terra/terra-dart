@@ -20,7 +20,7 @@ class DistributionAPI extends BaseAPI {
 
   Future<List<Rewards>> getRewards(String delegator) async {
     String root =
-        "${TerraClientConfiguration.blockchainResourcePath}/${CosmosBaseConstants.COSMOS_DISTRIBUTION_DELEGATORS}/$delegator/${CosmosDistributionResources.REWARDS}";
+        "${TerraClientConfiguration.blockchainResourcePath}${CosmosBaseConstants.COSMOS_DISTRIBUTION_DELEGATORS}/$delegator/${CosmosDistributionResources.REWARDS}";
 
     var response =
         await apiRequester.getAsync<DistributionRewardsInfoJson>(root);
@@ -38,7 +38,7 @@ class DistributionAPI extends BaseAPI {
 
   Future<List<Coin>> getValidatorCommission(String validator) async {
     String root =
-        "${TerraClientConfiguration.blockchainResourcePath}/${CosmosBaseConstants.COSMOS_DISTRIBUTION_VALIDATORS}/$validator/${CosmosDistributionResources.COMMISSION}";
+        "${TerraClientConfiguration.blockchainResourcePath}${CosmosBaseConstants.COSMOS_DISTRIBUTION_VALIDATORS}/$validator/${CosmosDistributionResources.COMMISSION}";
 
     var response = await apiRequester.getAsync<CommissionInfoApiJson>(root);
     if (response.successful!) {
@@ -52,7 +52,7 @@ class DistributionAPI extends BaseAPI {
 
   Future<String> getWithdrawAddress(String delegator) async {
     String root =
-        "${TerraClientConfiguration.blockchainResourcePath}/${CosmosBaseConstants.COSMOS_DISTRIBUTION_DELEGATORS}/$delegator/${CosmosDistributionResources.WITHDRAW_ADDRESS}";
+        "${TerraClientConfiguration.blockchainResourcePath}${CosmosBaseConstants.COSMOS_DISTRIBUTION_DELEGATORS}/$delegator/${CosmosDistributionResources.WITHDRAW_ADDRESS}";
 
     var response =
         await apiRequester.getAsync<DistributionWithDrawInfoJson>(root);
@@ -66,7 +66,7 @@ class DistributionAPI extends BaseAPI {
 
   Future<List<Coin>> getCommunityPool() async {
     String root =
-        "${TerraClientConfiguration.blockchainResourcePath}/${CosmosBaseConstants.COSMOS_DISTRIBUTION_COMMUNITY_POOL}";
+        "${TerraClientConfiguration.blockchainResourcePath}${CosmosBaseConstants.COSMOS_DISTRIBUTION_COMMUNITY_POOL}";
 
     var response = await apiRequester.getAsync<DistributionInfoApiJson>(root);
     if (response.successful!) {
@@ -80,7 +80,7 @@ class DistributionAPI extends BaseAPI {
 
   Future<DistributionParamsInfoJson> getParams() async {
     String root =
-        "${TerraClientConfiguration.blockchainResourcePath}/${CosmosBaseConstants.COSMOS_DISTRIBUTION_PARAMS}";
+        "${TerraClientConfiguration.blockchainResourcePath}${CosmosBaseConstants.COSMOS_DISTRIBUTION_PARAMS}";
 
     var response = await apiRequester.getAsync<DistributionInfoApiJson>(root);
     if (response.successful!) {

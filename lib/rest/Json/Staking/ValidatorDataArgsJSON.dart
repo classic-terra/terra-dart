@@ -12,8 +12,27 @@ class ValidatorDataArgsJSON {
   final ValidatorDescriptionJSON description;
   final CommissionCommonArgsJSON commission;
 
+  final String operator_Address;
+  final bool jailed;
+  final String status;
+  final String tokens;
+  final String delegator_shares;
+  final String unbonding_Height;
+  final DateTime unbonding_Time;
+  final String min_Self_Delegation;
+
   ValidatorDataArgsJSON(
-      this.consensus_pubkey, this.description, this.commission);
+      this.consensus_pubkey,
+      this.description,
+      this.commission,
+      this.operator_Address,
+      this.jailed,
+      this.status,
+      this.tokens,
+      this.delegator_shares,
+      this.unbonding_Height,
+      this.unbonding_Time,
+      this.min_Self_Delegation);
 
   // /// Connect the generated [_$AccountDtoFromJson] function to the `fromJson`
   // /// factory.

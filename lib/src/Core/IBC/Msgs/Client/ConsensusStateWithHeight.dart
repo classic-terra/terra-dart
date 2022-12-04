@@ -1,4 +1,5 @@
 import '../../../../../rest/Json/IBC/ConsensusStateJSON.dart';
+import '../../../../../rest/Json/IBC/IBCApiConsensusState.dart';
 import 'Height.dart';
 
 class ConsensusStateWithHeight {
@@ -18,12 +19,11 @@ class ConsensusStateWithHeight {
       ..height = height.toData()
       ..consensus_State = consensus_state;
   }
-  //  static ConsensusStateWithHeight FromJSON(IBCApiConsensusState data)
-  // {
-  //     return new ConsensusStateWithHeight(
-  //         Height.FromJSON(data.height),
-  //         data.consensus_state);
-  // }
+
+  static ConsensusStateWithHeight fromJSON(IBCApiConsensusState data) {
+    return ConsensusStateWithHeight(
+        Height.fromJSON(data.height), data.consensus_state);
+  }
 
   //  PROTO.ConsensusStateWithHeight ToProtoWithType()
   // {

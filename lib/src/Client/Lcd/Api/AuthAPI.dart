@@ -11,7 +11,7 @@ class AuthAPI extends BaseAPI {
 
   Future<AccountDto> getAccountInfoWalletAddress(String walletAddress) async {
     String root =
-        "${TerraClientConfiguration.blockchainResourcePath}/${CosmosBaseConstants.COSMOS_AUTH_ACCOUNTS}/$walletAddress";
+        "${TerraClientConfiguration.blockchainResourcePath}${CosmosBaseConstants.COSMOS_AUTH_ACCOUNTS}/$walletAddress";
 
     var response = await apiRequester.getAsync<AccountDtoContainer>(root);
     if (response.successful!) {

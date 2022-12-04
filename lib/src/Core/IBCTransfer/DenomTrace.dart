@@ -1,3 +1,5 @@
+import '../../../rest/Json/DenomTraceJSON.dart';
+
 class DenomTrace {
   final String path;
   final String base_denom;
@@ -7,12 +9,10 @@ class DenomTrace {
   static DenomTrace fromData(DenomTraceCommonArgs data) {
     return DenomTrace(data.path!, data.base_denom!);
   }
-  //  static DenomTrace FromJSON(DenomTraceJSON data)
-  // {
-  //     return new DenomTrace(
-  //         data.Path,
-  //         data.Base_Denom);
-  // }
+
+  static DenomTrace fromJSON(DenomTraceJSON data) {
+    return DenomTrace(data.path, data.base_denom);
+  }
 
   //  static DenomTrace FromProto(PROTO.DenomTrace data)
   // {

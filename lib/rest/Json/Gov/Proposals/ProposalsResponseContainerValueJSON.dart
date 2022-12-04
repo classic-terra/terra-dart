@@ -1,5 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 import '../../CoinJSON.dart';
+import 'ProposalContent.dart';
 import 'ProposalDepositsJSON.dart';
 import 'ProposalsFinallyTallyResults.dart';
 import 'VotesJSON.dart';
@@ -19,7 +20,7 @@ class ProposalsResponseContainerValueJSON {
   final DateTime voting_end_time;
   final List<ProposalDepositsJSON> deposits;
   final List<VotesJSON> votes;
-  final ProposalsResponseContainerValueJSON content;
+  final ProposalContent content;
 
   ProposalsResponseContainerValueJSON(
       this.proposal_id,

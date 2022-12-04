@@ -29,8 +29,7 @@ ProposalsResponseContainerValueJSON
           (json['votes'] as List<dynamic>)
               .map((e) => VotesJSON.fromJson(e as Map<String, dynamic>))
               .toList(),
-          ProposalsResponseContainerValueJSON.fromJson(
-              json['content'] as Map<String, dynamic>),
+          ProposalContent.fromJson(json['content'] as Map<String, dynamic>),
         );
 
 Map<String, dynamic> _$ProposalsResponseContainerValueJSONToJson(
