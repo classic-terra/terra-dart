@@ -7,11 +7,13 @@ part of 'AccountDto.dart';
 // **************************************************************************
 
 AccountDto _$AccountDtoFromJson(Map<String, dynamic> json) => AccountDto(
-      json['@type'] as String,
-      json['address'] as String,
-      KeysDto.fromJson(json['pub_key'] as Map<String, dynamic>),
-      json['account_number'] as int,
-      json['sequence'] as int,
+      json['@type'] as String?,
+      json['address'] as String?,
+      json['pub_key'] == null
+          ? null
+          : KeysDto.fromJson(json['pub_key'] as Map<String, dynamic>),
+      json['account_number'] as String?,
+      json['sequence'] as String?,
     );
 
 Map<String, dynamic> _$AccountDtoToJson(AccountDto instance) =>

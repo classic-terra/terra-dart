@@ -8,8 +8,8 @@ part of 'CommonTypeValueArgs.dart';
 
 CommonTypeValueArgs _$CommonTypeValueArgsFromJson(Map<String, dynamic> json) =>
     CommonTypeValueArgs(
-      json['type_url'] as String,
-      json['value'] as String,
+      json['type_url'] as String?,
+      json['value'] as String?,
     );
 
 Map<String, dynamic> _$CommonTypeValueArgsToJson(

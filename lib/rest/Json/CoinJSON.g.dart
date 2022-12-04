@@ -7,8 +7,8 @@ part of 'CoinJSON.dart';
 // **************************************************************************
 
 CoinJSON _$CoinJSONFromJson(Map<String, dynamic> json) => CoinJSON(
-      json['denom'] as String,
-      json['amount'] as String,
+      json['denom'] as String?,
+      json['amount'] as String?,
     );
 
 Map<String, dynamic> _$CoinJSONToJson(CoinJSON instance) => <String, dynamic>{

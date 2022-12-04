@@ -5,9 +5,9 @@ part 'FeeGrantAllowancesJson.g.dart';
 
 @JsonSerializable()
 class FeeGrantAllowancesJson {
-  final String granter;
-  final String grantee;
-  final CommonTypeValueArgs allowance;
+  final String? granter;
+  final String? grantee;
+  final CommonTypeValueArgs? allowance;
 
   FeeGrantAllowancesJson(this.granter, this.grantee, this.allowance);
 

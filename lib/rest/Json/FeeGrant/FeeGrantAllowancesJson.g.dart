@@ -9,9 +9,12 @@ part of 'FeeGrantAllowancesJson.dart';
 FeeGrantAllowancesJson _$FeeGrantAllowancesJsonFromJson(
         Map<String, dynamic> json) =>
     FeeGrantAllowancesJson(
-      json['granter'] as String,
-      json['grantee'] as String,
-      CommonTypeValueArgs.fromJson(json['allowance'] as Map<String, dynamic>),
+      json['granter'] as String?,
+      json['grantee'] as String?,
+      json['allowance'] == null
+          ? null
+          : CommonTypeValueArgs.fromJson(
+              json['allowance'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$FeeGrantAllowancesJsonToJson(

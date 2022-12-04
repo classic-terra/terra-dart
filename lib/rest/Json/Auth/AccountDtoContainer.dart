@@ -6,8 +6,8 @@ part 'AccountDtoContainer.g.dart';
 
 @JsonSerializable()
 class AccountDtoContainer {
-  final AccountDto account;
-  final List<AccountDto> accounts;
+  final AccountDto? account;
+  final List<AccountDto>? accounts;
 
   AccountDtoContainer(this.account, this.accounts);
 

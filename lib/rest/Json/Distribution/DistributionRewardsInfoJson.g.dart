@@ -9,11 +9,11 @@ part of 'DistributionRewardsInfoJson.dart';
 DistributionRewardsInfoJson _$DistributionRewardsInfoJsonFromJson(
         Map<String, dynamic> json) =>
     DistributionRewardsInfoJson(
-      (json['total'] as List<dynamic>)
-          .map((e) => CoinJSON.fromJson(e as Map<String, dynamic>))
+      (json['total'] as List<dynamic>?)
+          ?.map((e) => CoinJSON.fromJson(e as Map<String, dynamic>))
           .toList(),
-      (json['rewards'] as List<dynamic>)
-          .map((e) => RewardsDto.fromJson(e as Map<String, dynamic>))
+      (json['rewards'] as List<dynamic>?)
+          ?.map((e) => RewardsDto.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

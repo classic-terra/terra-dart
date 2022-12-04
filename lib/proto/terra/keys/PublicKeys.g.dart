@@ -7,8 +7,8 @@ part of 'PublicKeys.dart';
 // **************************************************************************
 
 PublicKeys _$PublicKeysFromJson(Map<String, dynamic> json) => PublicKeys(
-      json['type'] as String,
-      json['key'] as String,
+      json['type'] as String?,
+      json['key'] as String?,
     );
 
 Map<String, dynamic> _$PublicKeysToJson(PublicKeys instance) =>

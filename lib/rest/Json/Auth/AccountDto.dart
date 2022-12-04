@@ -7,11 +7,11 @@ part 'AccountDto.g.dart';
 @JsonSerializable()
 class AccountDto {
   @JsonKey(name: "@type")
-  final String type;
-  final String address;
-  final KeysDto pub_key;
-  final int account_number;
-  final int sequence;
+  final String? type;
+  final String? address;
+  final KeysDto? pub_key;
+  final String? account_number;
+  final String? sequence;
 
   AccountDto(this.type, this.address, this.pub_key, this.account_number,
       this.sequence);

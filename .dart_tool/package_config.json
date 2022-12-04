@@ -392,6 +392,12 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "random_string_generator",
+      "rootUri": "file:///C:/Users/dande/AppData/Local/Pub/Cache/hosted/pub.dev/random_string_generator-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "rational",
       "rootUri": "file:///C:/Users/dande/AppData/Local/Pub/Cache/hosted/pub.dev/rational-2.2.1",
       "packageUri": "lib/",
@@ -584,7 +590,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2022-12-03T17:47:02.568906Z",
+  "generated": "2022-12-03T21:09:41.384916Z",
   "generator": "pub",
   "generatorVersion": "2.19.0-443.0.dev"
 }

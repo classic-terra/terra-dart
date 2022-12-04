@@ -6,11 +6,11 @@ part 'KeysDto.g.dart';
 
 @JsonSerializable()
 class KeysDto {
-  final String typeUrl;
+  final String? typeUrl;
 
-  final int threshold;
-  final String key;
-  final List<PublicKeys> public_keys;
+  final int? threshold;
+  final String? key;
+  final List<PublicKeys>? public_keys;
 
   KeysDto(this.typeUrl, this.threshold, this.key, this.public_keys);
 

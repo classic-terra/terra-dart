@@ -15,7 +15,7 @@ class AuthAPI extends BaseAPI {
 
     var response = await apiRequester.getAsync<AccountDtoContainer>(root);
     if (response.successful!) {
-      return AccountDto.fromJson(response.result!);
+      return AccountDtoContainer.fromJson(response.result!).account!;
     }
 
     throw Exception(

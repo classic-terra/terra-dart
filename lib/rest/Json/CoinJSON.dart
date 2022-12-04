@@ -4,8 +4,8 @@ part 'CoinJSON.g.dart';
 
 @JsonSerializable()
 class CoinJSON {
-  final String denom;
-  final String amount;
+  final String? denom;
+  final String? amount;
 
   CoinJSON(this.denom, this.amount);
 

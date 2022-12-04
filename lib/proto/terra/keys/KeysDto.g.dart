@@ -7,11 +7,11 @@ part of 'KeysDto.dart';
 // **************************************************************************
 
 KeysDto _$KeysDtoFromJson(Map<String, dynamic> json) => KeysDto(
-      json['typeUrl'] as String,
-      json['threshold'] as int,
-      json['key'] as String,
-      (json['public_keys'] as List<dynamic>)
-          .map((e) => PublicKeys.fromJson(e as Map<String, dynamic>))
+      json['typeUrl'] as String?,
+      json['threshold'] as int?,
+      json['key'] as String?,
+      (json['public_keys'] as List<dynamic>?)
+          ?.map((e) => PublicKeys.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

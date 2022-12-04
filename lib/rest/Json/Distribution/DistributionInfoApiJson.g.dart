@@ -9,15 +9,19 @@ part of 'DistributionInfoApiJson.dart';
 DistributionInfoApiJson _$DistributionInfoApiJsonFromJson(
         Map<String, dynamic> json) =>
     DistributionInfoApiJson(
-      DistributionParamsInfoJson.fromJson(
-          json['params'] as Map<String, dynamic>),
-      (json['pool'] as List<dynamic>)
-          .map((e) => CoinJSON.fromJson(e as Map<String, dynamic>))
+      json['params'] == null
+          ? null
+          : DistributionParamsInfoJson.fromJson(
+              json['params'] as Map<String, dynamic>),
+      (json['pool'] as List<dynamic>?)
+          ?.map((e) => CoinJSON.fromJson(e as Map<String, dynamic>))
           .toList(),
-      (json['supply'] as List<dynamic>)
-          .map((e) => CoinJSON.fromJson(e as Map<String, dynamic>))
+      (json['supply'] as List<dynamic>?)
+          ?.map((e) => CoinJSON.fromJson(e as Map<String, dynamic>))
           .toList(),
-      PaginationJson.fromJson(json['pagination'] as Map<String, dynamic>),
+      json['pagination'] == null
+          ? null
+          : PaginationJson.fromJson(json['pagination'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$DistributionInfoApiJsonToJson(

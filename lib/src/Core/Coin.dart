@@ -16,7 +16,7 @@ class Coin implements Numeric<Coin, dynamic> {
   }
 
   static Coin fromJSON(CoinJSON data) {
-    return Coin(data.denom, double.parse(data.amount));
+    return Coin(data.denom, double.parse(data.amount!));
   }
 
   //  static Coin FromProto(COMB.Coin data)

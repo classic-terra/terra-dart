@@ -8,13 +8,15 @@ part of 'BankInfoApiJson.dart';
 
 BankInfoApiJson _$BankInfoApiJsonFromJson(Map<String, dynamic> json) =>
     BankInfoApiJson(
-      (json['supply'] as List<dynamic>)
-          .map((e) => CoinJSON.fromJson(e as Map<String, dynamic>))
+      (json['supply'] as List<dynamic>?)
+          ?.map((e) => CoinJSON.fromJson(e as Map<String, dynamic>))
           .toList(),
-      (json['balances'] as List<dynamic>)
-          .map((e) => CoinJSON.fromJson(e as Map<String, dynamic>))
+      (json['balances'] as List<dynamic>?)
+          ?.map((e) => CoinJSON.fromJson(e as Map<String, dynamic>))
           .toList(),
-      PaginationJson.fromJson(json['pagination'] as Map<String, dynamic>),
+      json['pagination'] == null
+          ? null
+          : PaginationJson.fromJson(json['pagination'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$BankInfoApiJsonToJson(BankInfoApiJson instance) =>

@@ -5,7 +5,7 @@ part 'CommissionInfoApiJson.g.dart';
 
 @JsonSerializable()
 class CommissionInfoApiJson {
-  final CommissionJson commission;
+  final CommissionJson? commission;
   CommissionInfoApiJson(this.commission);
 
   // /// Connect the generated [_$AccountDtoFromJson] function to the `fromJson`

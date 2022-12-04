@@ -9,7 +9,9 @@ part of 'CommissionInfoApiJson.dart';
 CommissionInfoApiJson _$CommissionInfoApiJsonFromJson(
         Map<String, dynamic> json) =>
     CommissionInfoApiJson(
-      CommissionJson.fromJson(json['commission'] as Map<String, dynamic>),
+      json['commission'] == null
+          ? null
+          : CommissionJson.fromJson(json['commission'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$CommissionInfoApiJsonToJson(

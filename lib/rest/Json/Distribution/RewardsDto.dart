@@ -5,8 +5,8 @@ part 'RewardsDto.g.dart';
 
 @JsonSerializable()
 class RewardsDto {
-  final String validator_address;
-  final List<CoinJSON> reward;
+  final String? validator_address;
+  final List<CoinJSON>? reward;
 
   RewardsDto(this.validator_address, this.reward);
 

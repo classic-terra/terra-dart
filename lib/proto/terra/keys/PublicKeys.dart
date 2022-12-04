@@ -4,8 +4,8 @@ part 'PublicKeys.g.dart';
 
 @JsonSerializable()
 class PublicKeys {
-  final String type;
-  final String key;
+  final String? type;
+  final String? key;
 
   PublicKeys(this.type, this.key);
 

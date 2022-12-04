@@ -5,10 +5,10 @@
 DistributionParamsInfoJson _$DistributionParamsInfoJsonFromJson(
         Map<String, dynamic> json) =>
     DistributionParamsInfoJson(
-      json['community_tax'] as String,
-      json['base_proposer_reward'] as String,
-      json['bonus_proposer_reward'] as String,
-      json['withdraw_addr_enabled'] as bool,
+      json['community_tax'] as String?,
+      json['base_proposer_reward'] as String?,
+      json['bonus_proposer_reward'] as String?,
+      json['withdraw_addr_enabled'] as bool?,
     );
 
 Map<String, dynamic> _$DistributionParamsInfoJsonToJson(

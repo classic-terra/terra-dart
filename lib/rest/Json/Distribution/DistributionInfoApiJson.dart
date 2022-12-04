@@ -7,10 +7,10 @@ part 'DistributionInfoApiJson.g.dart';
 
 @JsonSerializable()
 class DistributionInfoApiJson {
-  final DistributionParamsInfoJson params;
-  final List<CoinJSON> pool;
-  final List<CoinJSON> supply;
-  final PaginationJson pagination;
+  final DistributionParamsInfoJson? params;
+  final List<CoinJSON>? pool;
+  final List<CoinJSON>? supply;
+  final PaginationJson? pagination;
 
   DistributionInfoApiJson(this.params, this.pool, this.supply, this.pagination);
 

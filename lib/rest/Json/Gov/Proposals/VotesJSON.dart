@@ -7,7 +7,7 @@ part 'VotesJSON.g.dart';
 
 @JsonSerializable()
 class VotesJSON {
-  final int proposal_id;
+  final double proposal_id;
   final String voter;
   final VoteOption option;
   final List<VoteOptionJSON> options;

@@ -5,10 +5,10 @@ part 'DistributionParamsInfoJson.g.dart';
 
 @JsonSerializable()
 class DistributionParamsInfoJson {
-  final String community_tax;
-  final String base_proposer_reward;
-  final String bonus_proposer_reward;
-  final bool withdraw_addr_enabled;
+  final String? community_tax;
+  final String? base_proposer_reward;
+  final String? bonus_proposer_reward;
+  final bool? withdraw_addr_enabled;
 
   DistributionParamsInfoJson(this.community_tax, this.base_proposer_reward,
       this.bonus_proposer_reward, this.withdraw_addr_enabled);

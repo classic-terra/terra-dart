@@ -8,9 +8,11 @@ part of 'AccountDtoContainer.dart';
 
 AccountDtoContainer _$AccountDtoContainerFromJson(Map<String, dynamic> json) =>
     AccountDtoContainer(
-      AccountDto.fromJson(json['account'] as Map<String, dynamic>),
-      (json['accounts'] as List<dynamic>)
-          .map((e) => AccountDto.fromJson(e as Map<String, dynamic>))
+      json['account'] == null
+          ? null
+          : AccountDto.fromJson(json['account'] as Map<String, dynamic>),
+      (json['accounts'] as List<dynamic>?)
+          ?.map((e) => AccountDto.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

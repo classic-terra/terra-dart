@@ -7,9 +7,9 @@ part of 'RewardsDto.dart';
 // **************************************************************************
 
 RewardsDto _$RewardsDtoFromJson(Map<String, dynamic> json) => RewardsDto(
-      json['validator_address'] as String,
-      (json['reward'] as List<dynamic>)
-          .map((e) => CoinJSON.fromJson(e as Map<String, dynamic>))
+      json['validator_address'] as String?,
+      (json['reward'] as List<dynamic>?)
+          ?.map((e) => CoinJSON.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

@@ -29,12 +29,12 @@ class TerraMainDIModule {
   }
 
   static void _registerApiServices() {
-    TerraStartup.injector.registerSingleton<AuthAPI>(
-        () => AuthAPI(TerraStartup.injector.get<TerraRestfulService>()));
+    var http = TerraStartup.injector.get<TerraRestfulService>();
+    TerraStartup.injector.registerSingleton<AuthAPI>(() => AuthAPI(http));
     TerraStartup.injector.registerSingleton<AuthzAPI>(() => AuthzAPI());
-    TerraStartup.injector.registerSingleton<BankAPI>(() => BankAPI());
+    TerraStartup.injector.registerSingleton<BankAPI>(() => BankAPI(http));
     TerraStartup.injector
-        .registerSingleton<DistributionAPI>(() => DistributionAPI());
+        .registerSingleton<DistributionAPI>(() => DistributionAPI(http));
     TerraStartup.injector.registerSingleton<FeeGrantAPI>(() => FeeGrantAPI());
     TerraStartup.injector.registerSingleton<GovAPI>(() => GovAPI());
     TerraStartup.injector.registerSingleton<IBCAPI>(() => IBCAPI());

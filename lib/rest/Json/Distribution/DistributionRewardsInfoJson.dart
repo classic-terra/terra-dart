@@ -6,8 +6,8 @@ part 'DistributionRewardsInfoJson.g.dart';
 
 @JsonSerializable()
 class DistributionRewardsInfoJson {
-  final List<CoinJSON> total;
-  final List<RewardsDto> rewards;
+  final List<CoinJSON>? total;
+  final List<RewardsDto>? rewards;
 
   DistributionRewardsInfoJson(this.total, this.rewards);
 

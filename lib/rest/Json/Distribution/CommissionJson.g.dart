@@ -8,8 +8,8 @@ part of 'CommissionJson.dart';
 
 CommissionJson _$CommissionJsonFromJson(Map<String, dynamic> json) =>
     CommissionJson(
-      (json['commission'] as List<dynamic>)
-          .map((e) => CoinJSON.fromJson(e as Map<String, dynamic>))
+      (json['commission'] as List<dynamic>?)
+          ?.map((e) => CoinJSON.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

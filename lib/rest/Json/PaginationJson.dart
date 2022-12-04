@@ -4,8 +4,8 @@ part 'PaginationJson.g.dart';
 
 @JsonSerializable()
 class PaginationJson {
-  final String next_key;
-  final String total;
+  final String? next_key;
+  final String? total;
 
   PaginationJson(this.next_key, this.total);
 

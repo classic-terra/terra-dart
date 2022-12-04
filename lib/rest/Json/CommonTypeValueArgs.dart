@@ -5,8 +5,8 @@ part 'CommonTypeValueArgs.g.dart';
 
 @JsonSerializable()
 class CommonTypeValueArgs {
-  final String type_url;
-  final String value;
+  final String? type_url;
+  final String? value;
 
   CommonTypeValueArgs(this.type_url, this.value);
 

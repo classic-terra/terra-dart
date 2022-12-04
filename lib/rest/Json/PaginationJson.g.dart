@@ -8,8 +8,8 @@ part of 'PaginationJson.dart';
 
 PaginationJson _$PaginationJsonFromJson(Map<String, dynamic> json) =>
     PaginationJson(
-      json['next_key'] as String,
-      json['total'] as String,
+      json['next_key'] as String?,
+      json['total'] as String?,
     );
 
 Map<String, dynamic> _$PaginationJsonToJson(PaginationJson instance) =>

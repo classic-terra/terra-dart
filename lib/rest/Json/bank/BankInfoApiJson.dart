@@ -7,9 +7,9 @@ part 'BankInfoApiJson.g.dart';
 
 @JsonSerializable()
 class BankInfoApiJson {
-  List<CoinJSON> supply;
-  List<CoinJSON> balances;
-  PaginationJson pagination;
+  List<CoinJSON>? supply;
+  List<CoinJSON>? balances;
+  PaginationJson? pagination;
 
   BankInfoApiJson(this.supply, this.balances, this.pagination);
 
