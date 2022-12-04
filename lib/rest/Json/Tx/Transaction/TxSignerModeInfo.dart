@@ -7,10 +7,10 @@ part 'TxSignerModeInfo.g.dart';
 
 @JsonSerializable()
 class TxSignerModeInfo {
-  final TxSignerModeInfoSingle single;
-  final TxSignerModeInfoMulti multi;
+  TxSignerModeInfoSingle? single;
+  TxSignerModeInfoMulti? multi;
 
-  TxSignerModeInfo(this.single, this.multi);
+  TxSignerModeInfo({this.single, this.multi});
 
   // /// Connect the generated [_$AccountDtoFromJson] function to the `fromJson`
   // /// factory.
