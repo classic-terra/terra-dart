@@ -16,7 +16,7 @@ class MsgAcknowledgement extends SignerData {
       this.proof_height, this.signer);
 
   static MsgAcknowledgement fromData(MsgAcknowledgementDataArgs data) {
-    return MsgAcknowledgement(data.acknowledgment, Packet.FromData(data.packet),
+    return MsgAcknowledgement(data.acknowledgment, Packet.fromData(data.packet),
         data.proof_acked, Height.fromData(data.proof_Height), data.signer);
   }
 
