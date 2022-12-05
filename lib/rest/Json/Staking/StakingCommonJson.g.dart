@@ -8,7 +8,7 @@ part of 'StakingCommonJson.dart';
 
 StakingCommonJson _$StakingCommonJsonFromJson(Map<String, dynamic> json) =>
     StakingCommonJson(
-      StakingCommonJson.fromJson(json['params'] as Map<String, dynamic>),
+      StakingApiParams.fromJson(json['params'] as Map<String, dynamic>),
       StakingPoolJSON.fromJson(json['pool'] as Map<String, dynamic>),
       (json['validators'] as List<dynamic>)
           .map((e) => ValidatorDataArgsJSON.fromJson(e as Map<String, dynamic>))

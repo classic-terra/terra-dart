@@ -13,7 +13,7 @@ import 'package:terra_dart/src/Client/Lcd/Api/mintAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/oracleAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/slashingAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/stakingAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/tXAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/txAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/tendermintAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/treasuryAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/txBroadcastApi.dart';

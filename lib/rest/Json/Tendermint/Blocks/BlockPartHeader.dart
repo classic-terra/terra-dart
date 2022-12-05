@@ -4,7 +4,7 @@ part 'BlockPartHeader.g.dart';
 
 @JsonSerializable()
 class BlockPartHeader {
-  final String total;
+  final int total;
   final String hash;
 
   BlockPartHeader(this.total, this.hash);

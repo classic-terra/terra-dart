@@ -14,6 +14,12 @@ class TerraStringExtensions {
     return generator.generate();
   }
 
+  // String getBase64StringFromString(String data) {
+  //   return Base64Encoder()..decode(data);
+  // }
+
+  // List<int> getBase64BytesFromString(String data) {}
+
   static DateTime getISODateTimeFromString(String dateTime) {
     return DateTime.parse(dateTime);
   }

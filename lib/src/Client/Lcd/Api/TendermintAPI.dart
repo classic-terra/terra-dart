@@ -54,7 +54,7 @@ class TendermintAPI extends BaseAPI {
     throw Exception("");
   }
 
-  Future<BlockContainer> getBlockInfo({double? height}) async {
+  Future<BlockContainer> getBlockInfo({int? height}) async {
     String ht = height != null
         ? "${CosmosBaseConstants.COSMOS_TENDERMINT_BLOCKS}/$height"
         : CosmosBaseConstants.COSMOS_TENDERMINT_BLOCKS_LATEST;

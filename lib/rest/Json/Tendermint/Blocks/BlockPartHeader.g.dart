@@ -8,7 +8,7 @@ part of 'BlockPartHeader.dart';
 
 BlockPartHeader _$BlockPartHeaderFromJson(Map<String, dynamic> json) =>
     BlockPartHeader(
-      json['total'] as String,
+      json['total'] as int,
       json['hash'] as String,
     );
 

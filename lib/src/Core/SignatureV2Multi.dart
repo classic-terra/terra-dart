@@ -1,46 +1,40 @@
-    import '../../rest/Json/Tx/Transaction/TxSignerModeInfoMulti.dart';
+// import 'package:terra_dart/src/Core/signatureV2Descriptor.dart';
 
-class SignatureV2Multi
-    {
-          CompactBitArray bitArray;
-          SignatureV2Descriptor[] signatures;
-         SignatureV2Multi(CompactBitArray bitArray, SignatureV2Descriptor[] signatures)
-        {
-            this.bitArray = bitArray;
-            this.signatures = signatures;
-        }
+// import '../../rest/Json/Tx/Transaction/TxSignerModeInfoMulti.dart';
+// import 'CompactBitArray.dart';
 
-         static SignatureV2Multi FromData(MultiDataArgs data)
-        {
-            return new SignatureV2Multi(CompactBitArray.FromData(data.BitArray), data.Signatures.ToList().ConvertAll(w => SignatureV2Descriptor.FromData(w)).ToArray());
-        }
+// class SignatureV2Multi {
+//   final CompactBitArray bitArray;
+//   final List<SignatureV2Descriptor> signatures;
+//   SignatureV2Multi(this.bitArray, this.signatures);
 
-         MultiDataArgs ToData()
-        {
-            return new MultiDataArgs()
-            {
-                BitArray = this.bitArray.ToData(),
-                Signatures = this.signatures.ToList().ConvertAll(w => w.ToData()).ToArray()
-            };
-        }
-         TxSignerModeInfoMulti toJSON()
-        {
-            return new TxSignerModeInfoMulti()
-            {
-                bitarray = this.bitArray.ToJSON(),
-            };
-        }
-         Multi ToProtoWithType()
-        {
-            return new Multi()
-            {
-                 Bitarray = this.bitArray.ToProtoWithTypeSign(),
-            };
-        }
+//   static SignatureV2Multi fromData(MultiDataArgs data) {
+//     return SignatureV2Multi(
+//         CompactBitArray.fromData(data.bitArray!),
+//         data.signatures!
+//             .map((w) => SignatureV2Descriptor.fromData(w))
+//             .toList());
+//   }
 
-    }
-     class MultiDataArgs
-    {
-         CompactBitArrayData BitArray { get; set; }
-         SignatureV2DescriptorDataArgs[] Signatures { get; set; }
-    }
+//   MultiDataArgs toData() {
+//     return MultiDataArgs()
+//       ..bitArray = bitArray.ToData()
+//       ..signatures = signatures.map((w) => w.toData()).toList();
+//   }
+
+//   TxSignerModeInfoMulti toJSON() {
+//     return TxSignerModeInfoMulti(bitArray.toJSON());
+//   }
+//   //  Multi ToProtoWithType()
+//   // {
+//   //     return  Multi()
+//   //     {
+//   //          Bitarray = this.bitArray.ToProtoWithTypeSign(),
+//   //     };
+//   // }
+// }
+
+// class MultiDataArgs {
+//   CompactBitArrayData? bitArray;
+//   List<SignatureV2DescriptorDataArgs>? signatures;
+// }

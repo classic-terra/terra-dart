@@ -11,7 +11,7 @@ import 'package:terra_dart/src/Client/Lcd/Api/mintAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/oracleAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/slashingAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/stakingAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/tXAPI.dart';
+import 'package:terra_dart/src/Client/Lcd/Api/txAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/tendermintAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/treasuryAPI.dart';
 import 'package:terra_dart/src/Client/Lcd/Api/txBroadcastApi.dart';
@@ -31,28 +31,30 @@ class TerraMainDIModule {
   static void _registerApiServices() {
     var http = TerraStartup.injector.get<TerraRestfulService>();
     TerraStartup.injector.registerSingleton<AuthAPI>(() => AuthAPI(http));
-    TerraStartup.injector.registerSingleton<AuthzAPI>(() => AuthzAPI());
+    TerraStartup.injector.registerSingleton<AuthzAPI>(() => AuthzAPI(http));
     TerraStartup.injector.registerSingleton<BankAPI>(() => BankAPI(http));
     TerraStartup.injector
         .registerSingleton<DistributionAPI>(() => DistributionAPI(http));
     TerraStartup.injector
         .registerSingleton<FeeGrantAPI>(() => FeeGrantAPI(http));
     TerraStartup.injector.registerSingleton<GovAPI>(() => GovAPI(http));
-    TerraStartup.injector.registerSingleton<IBCAPI>(() => IBCAPI());
+    TerraStartup.injector.registerSingleton<IBCAPI>(() => IBCAPI(http));
     TerraStartup.injector
-        .registerSingleton<IBCTransferAPI>(() => IBCTransferAPI());
-    TerraStartup.injector.registerSingleton<MarketAPI>(() => MarketAPI());
-    TerraStartup.injector.registerSingleton<MintAPI>(() => MintAPI());
-    TerraStartup.injector.registerSingleton<OracleAPI>(() => OracleAPI());
-    TerraStartup.injector.registerSingleton<SlashingAPI>(() => SlashingAPI());
-    TerraStartup.injector.registerSingleton<StakingAPI>(() => StakingAPI());
-    TerraStartup.injector.registerSingleton<TreasuryAPI>(() => TreasuryAPI());
+        .registerSingleton<IBCTransferAPI>(() => IBCTransferAPI(http));
+    TerraStartup.injector.registerSingleton<MarketAPI>(() => MarketAPI(http));
+    TerraStartup.injector.registerSingleton<MintAPI>(() => MintAPI(http));
+    TerraStartup.injector.registerSingleton<OracleAPI>(() => OracleAPI(http));
     TerraStartup.injector
-        .registerSingleton<TendermintAPI>(() => TendermintAPI());
-    TerraStartup.injector.registerSingleton<TxAPI>(() => TxAPI());
+        .registerSingleton<SlashingAPI>(() => SlashingAPI(http));
+    TerraStartup.injector.registerSingleton<StakingAPI>(() => StakingAPI(http));
+    TerraStartup.injector
+        .registerSingleton<TreasuryAPI>(() => TreasuryAPI(http));
+    TerraStartup.injector
+        .registerSingleton<TendermintAPI>(() => TendermintAPI(http));
+    TerraStartup.injector.registerSingleton<TxAPI>(() => TxAPI(http));
     TerraStartup.injector
         .registerSingleton<TxBroadcastAPI>(() => TxBroadcastAPI());
-    TerraStartup.injector.registerSingleton<WasmAPI>(() => WasmAPI());
+    TerraStartup.injector.registerSingleton<WasmAPI>(() => WasmAPI(http));
   }
 
   static void _registerLCDServices() {

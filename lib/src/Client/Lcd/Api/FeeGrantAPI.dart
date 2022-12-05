@@ -6,6 +6,8 @@ import '../../../../rest/Json/FeeGrant/FeeGrantAllowancesContainer.dart';
 import '../../../../rest/Json/FeeGrant/FeeGrantAllowancesJson.dart';
 import '../../../../rest/services/terraRestfulService.dart';
 import '../../../Configuration/Environment/TerraClientConfiguration.dart';
+import '../../../Core/Constants/CoinDenoms.dart';
+import '../../../Core/coin.dart';
 import '../Constants/cosmosBaseConstants.dart';
 import 'baseAPI.dart';
 
@@ -41,22 +43,25 @@ class FeeGrantAPI extends BaseAPI {
   //   throw Exception("");
   // }
 
-//   Future<BasicAllowance> getBasicAllowance(
-//       String walletGrantee, String walletGranter) async {
-//     String root =
-//         "${TerraClientConfiguration.blockchainResourcePath}${CosmosBaseConstants.COSMOS_FEEGRANT_ALLOWANCE}/$walletGranter/$walletGrantee";
+  Future<BasicAllowance> getAllowance(
+      String walletGrantee, String walletGranter) async {
+    String root =
+        "${TerraClientConfiguration.blockchainResourcePath}${CosmosBaseConstants.COSMOS_FEEGRANT_ALLOWANCE}/$walletGranter/$walletGrantee";
 
-//     var response =
-//         await apiRequester.getAsync<FeeGrantAllowancesContainer>(root);
-//     if (response.successful!) {
-//       var allowance =
-//           FeeGrantAllowancesContainer.fromJson(response.result!).allowance;
+    var response =
+        await apiRequester.getAsync<FeeGrantAllowancesContainer>(root);
+    if (response.successful!) {
+      var allowance =
+          FeeGrantAllowancesContainer.fromJson(response.result!).allowance;
 
-// var data = BasicAllowanceDataArgs()
-// ..expiration = Allocator
-//           BasicAllowance.fromData()
-//     }
+      return BasicAllowance.fromData(BasicAllowanceDataArgs()
+        ..spend_Limit = [
+          CoinDataArgs()
+            ..denom = CoinDenoms.ULUNA
+            ..amount = double.parse(allowance[0].allowance!.value!)
+        ]);
+    }
 
-//     throw Exception("");
-//   }
+    throw Exception("");
+  }
 }

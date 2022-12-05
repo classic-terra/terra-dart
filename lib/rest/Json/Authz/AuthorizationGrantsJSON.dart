@@ -1,26 +1,22 @@
-//  public class BankInfoApiJson
-//     {
-//         public CoinJSON[] supply { get; set; }
-//         public CoinJSON[] balances { get; set; }
-//         public PaginationJson pagination { get; set; }
-//     }
+import 'package:json_annotation/json_annotation.dart';
 
-//     import 'package:json_annotation/json_annotation.dart';
+import '../PaginationJson.dart';
+import 'AuthorizationGrantValueJSON.dart';
 
-// part 'CoinJSON.g.dart';
+part 'AuthorizationGrantsJSON.g.dart';
 
-// @JsonSerializable()
-// class CoinJSON {
-//   final String denom;
-//   final String amount;
+@JsonSerializable()
+class AuthorizationGrantsJSON {
+  final List<AuthorizationGrantValueJSON> grants;
+  final PaginationJson pagination;
 
-//   CoinJSON(this.denom, this.amount);
+  AuthorizationGrantsJSON(this.grants, this.pagination);
 
-//   // /// Connect the generated [_$AccountDtoFromJson] function to the `fromJson`
-//   // /// factory.
-//   factory CoinJSON.fromJson(Map<String, dynamic> json) =>
-//       _$CoinJSONFromJson(json);
+  // /// Connect the generated [_$AccountDtoFromJson] function to the `fromJson`
+  // /// factory.
+  factory AuthorizationGrantsJSON.fromJson(Map<String, dynamic> json) =>
+      _$AuthorizationGrantsJSONFromJson(json);
 
-//   /// Connect the generated [_$CoinJSONToJson] function to the `toJson` method.
-//   Map<String, dynamic> toJson() => _$CoinJSONToJson(this);
-// }
+  /// Connect the generated [_$AuthorizationGrantsJSONToJson] function to the `toJson` method.
+  Map<String, dynamic> toJson() => _$AuthorizationGrantsJSONToJson(this);
+}

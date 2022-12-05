@@ -18,16 +18,9 @@ void main() {
       var lcd = TerraStartup.getLCDClient();
       // var wallet = TerraStartup.getLCDClient()
       //     .createWallet("terra1x46rqay4d3cssq8gxxvqz8xt6nwlz4td20k38v");
-      var rewards = await lcd.distribution
-          .getRewards(PreconfiguredWallets.TEST_NET_WALLET);
-      var val = await lcd.distribution.getValidatorCommission(
-          "terravaloper1259cmu5zyklsdkmgstxhwqpe0utfe5hhyty0at");
-      var c = await lcd.distribution
-          .getWithdrawAddress(PreconfiguredWallets.TEST_NET_WALLET);
-      var t = await lcd.distribution.getCommunityPool();
+      var txs = await lcd.tx.getTxHashesByBlockHeight(10330868);
 
-      var r = await lcd.distribution.getParams();
-
+      var txinfo = await lcd.tx.getTxInfo(txs[0]);
       print("");
     });
   });

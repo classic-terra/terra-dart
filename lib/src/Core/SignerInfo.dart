@@ -1,68 +1,53 @@
-   class SignerInfo
-    {
-          KeysDto _key;
-          double sequence;
-          ModeInfo mode_info;
+// import '../../proto/terra/keys/KeysDto.dart';
+// import '../../rest/Json/Tx/Transaction/TxSignerInfo.dart';
+// import 'modeInfo.dart';
 
-         SignerInfo(
-            KeysDto _key,
-            double sequence,
-            ModeInfo mode_info)
-        {
-            this._key = _key;
-            this.sequence = sequence;
-            this.mode_info = mode_info;
-        }
+// class SignerInfo {
+//   final KeysDto key;
+//   final double sequence;
+//   final ModeInfo mode_info;
 
-         static SignerInfo FromData(SignerInfoDataArgs data)
-        {
-            return new SignerInfo(
-                data._Key,
-                data.Sequence,
-                ModeInfo.FromData(data.Mode_Info));
-        }
+//   SignerInfo(this.key, this.sequence, this.mode_info);
 
-         PROTO.SignerInfo ToProtoWithType()
-        {
-            var msg = new PROTO.SignerInfo()
-            {
-                ModeInfo = this.mode_info.ToProtoWithType(),
-                Sequence = (ulong)this.sequence,
-                Key = this._key!.PackAny(this._key.Key)
-            };
+//   static SignerInfo fromData(SignerInfoDataArgs data) {
+//     return SignerInfo(
+//         data.key!, data.sequence!, ModeInfo.fromData(data.mode_Info!));
+//   }
 
-            return msg;
-        }
+//   //  PROTO.SignerInfo ToProtoWithType()
+//   // {
+//   //     var msg =  PROTO.SignerInfo()
+//   //     {
+//   //         ModeInfo = this.mode_info.ToProtoWithType(),
+//   //         Sequence = (ulong)this.sequence,
+//   //         Key = this._key!.PackAny(this._key.Key)
+//   //     };
 
-         byte[] ToProto()
-        {
-            return ProtoExtensions.SerialiseFromData(this.ToProtoWithType());
-        }
+//   //     return msg;
+//   // }
 
-         SignerInfoDataArgs ToData()
-        {
-            return new SignerInfoDataArgs()
-            {
-                Sequence = this.sequence,
-                Mode_Info = this.mode_info.ToData(),
-                _Key = this._key,
-            };
-        }
+//   //  byte[] ToProto()
+//   // {
+//   //     return ProtoExtensions.SerialiseFromData(this.ToProtoWithType());
+//   // }
 
-         TxSignerInfo ToJson()
-        {
-            return new TxSignerInfo()
-            {
-                mode_info = this.mode_info.ToJSON(),
-                _key = this._key,
-                sequence = this.sequence
-            };
-        }
-    }
+//   SignerInfoDataArgs toData() {
+//     return SignerInfoDataArgs()
+//       ..sequence = sequence
+//       ..mode_Info = mode_info.toData()
+//       ..key = key;
+//   }
 
-     class SignerInfoDataArgs
-    {
-         KeysDto _Key { get; set; }
-         double Sequence { get; set; }
-         ModeInfoDataArgs Mode_Info { get; set; }
-    }
+//   TxSignerInfo toJson() {
+//     return TxSignerInfo(key, mode_info.toJSON(), sequence);
+//   }
+// }
+
+import '../../proto/terra/keys/KeysDto.dart';
+import 'modeInfo.dart';
+
+class SignerInfoDataArgs {
+  KeysDto? key;
+  double? sequence;
+  ModeInfoDataArgs? mode_Info;
+}

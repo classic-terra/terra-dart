@@ -1,9 +1,9 @@
 import 'package:terra_dart/src/Client/Lcd/Api/baseAPI.dart';
+import 'package:terra_dart/src/Configuration/Environment/TerraClientConfiguration.dart';
 
 import '../../../../rest/Json/Auth/AccountDto.dart';
 import '../../../../rest/Json/Auth/AccountDtoContainer.dart';
 import '../../../../rest/services/terraRestfulService.dart';
-import '../../../Configuration/Environment/TerraClientConfiguration.dart';
 import '../Constants/cosmosBaseConstants.dart';
 
 class AuthAPI extends BaseAPI {

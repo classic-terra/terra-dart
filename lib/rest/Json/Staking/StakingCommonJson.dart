@@ -1,6 +1,7 @@
 import 'package:json_annotation/json_annotation.dart';
 
 import '../PaginationJson.dart';
+import 'StakingApiParams.dart';
 import 'StakingDelegationResponse.dart';
 import 'StakingPoolJSON.dart';
 import 'ValidatorDataArgsJSON.dart';
@@ -10,7 +11,7 @@ part 'StakingCommonJson.g.dart';
 
 @JsonSerializable()
 class StakingCommonJson {
-  final StakingCommonJson params;
+  final StakingApiParams params;
   final StakingPoolJSON pool;
   final List<ValidatorDataArgsJSON> validators;
   final List<RedelegationResponseJSON> redelegation_responses;
