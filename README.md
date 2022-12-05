@@ -1,6 +1,6 @@
 <br/>
 <p align="center">
-    <a href="https://www.terrarebels.net/"><img src="Dart.svg" align="center" width=350/></a>
+    <a href="https://www.terrarebels.net/"><img src="https://github.com/terra-rebels/terra-dart/blob/main/Dart.svg" align="center" width=350/></a>
 </p>
 
 <p align="center">
