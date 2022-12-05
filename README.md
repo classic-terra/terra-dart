@@ -65,7 +65,7 @@ That's it! Now you're ready to start communicating with the blockchain!
 
 ## Usage
 
-Terra-Sharp can be used for Mobile & Web Developers. Supports all Microsoft Technologies from Xamarin, MAUI, ASP & Unity.
+TerraDart can be used for Mobile & Web Developers. Supports all Flutter & Dart Environments.
 
 ### Getting Blockchain data
 :exclamation: TerraDart can connect to both the terra-classic (LUNC/USTC) and LUNA2 networks. If you want to communicate with the classic chain, you have to set your Enviornment on **TerraStartup.InitializeKernel** to **TerraEnvironment.Classic**.
