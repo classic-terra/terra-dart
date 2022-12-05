@@ -46,7 +46,7 @@ TerraDart is a Dart SDK for writing applications that interact with the Terra bl
 - Exposes the Terra API through [`LCDClient`](https://docs.terra.money/develop/terra-py/client/lcd/lcdclient)
 - Parses responses into native Dart types
 
-We highly suggest using TerraSharp in a code editor that has support for type declarations, so you can take advantage of the helpful type hints that are included with the package.
+We highly suggest using TerraDart in a code editor that has support for type declarations, so you can take advantage of the helpful type hints that are included with the package.
 
 ## Installation & Configuration
 
@@ -68,7 +68,7 @@ That's it! Now you're ready to start communicating with the blockchain!
 Terra-Sharp can be used for Mobile & Web Developers. Supports all Microsoft Technologies from Xamarin, MAUI, ASP & Unity.
 
 ### Getting Blockchain data
-:exclamation: TerraSharp can connect to both the terra-classic (LUNC/USTC) and LUNA2 networks. If you want to communicate with the classic chain, you have to set your Enviornment on **TerraStartup.InitializeKernel** to **TerraEnvironment.Classic**.
+:exclamation: TerraDart can connect to both the terra-classic (LUNC/USTC) and LUNA2 networks. If you want to communicate with the classic chain, you have to set your Enviornment on **TerraStartup.InitializeKernel** to **TerraEnvironment.Classic**.
 
 Below we're going to pull balance information on a sample wallet.
 ```dart
