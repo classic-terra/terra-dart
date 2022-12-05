@@ -14,12 +14,12 @@ The Official Dart SDK for the Terra Ecosystem (LUNC/USTC/LUNA2)
   </a>
 
   <a href="https://pub.dev/packages/terra_dart">
-  <img alt="GitHub" src="https://img.shields.io/pub/v/grpc">
+  <img alt="GitHub" src="https://img.shields.io/pub/v/terra_dart">
   </a>
   
   
   <a href="https://pub.dev/packages/terra_dart">
-  <img alt="GitHub" src="https://img.shields.io/pub/likes/grpc?color=red">
+  <img alt="GitHub" src="https://img.shields.io/pub/likes/terra_dart?color=red">
   </a>
 </p>
 
