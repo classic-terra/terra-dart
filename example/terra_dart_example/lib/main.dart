@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:terra_dart/terraEnvironment.dart';
+import 'package:terra_dart/terraStartup.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,13 +53,23 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
-    setState(() {
+    setState(() async {
+      // Here we're targeting the Classic Blockchain
+      TerraStartup.initializeKernel(TerraEnvironment.classic);
+
+      var lcd = TerraStartup.getLCDClient();
+
+      // get the current balance of "terra1x46rqay4d3cssq8gxxvqz8xt6nwlz4td20k38v"
+      var balance = await lcd.bank
+          .getBalance("terra1x46rqay4d3cssq8gxxvqz8xt6nwlz4td20k38v");
+
+      print(balance);
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _counter++;
+      _counter = _counter;
     });
   }
 

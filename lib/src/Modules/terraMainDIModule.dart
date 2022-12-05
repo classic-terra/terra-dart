@@ -1,26 +1,26 @@
-import 'package:terra_dart/src/Client/Lcd/Api/authAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/authzAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/bankAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/distributionAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/feeGrantAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/govAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/ibcAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/ibcTransferAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/marketAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/mintAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/oracleAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/slashingAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/stakingAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/txAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/tendermintAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/treasuryAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/txBroadcastApi.dart';
-import 'package:terra_dart/src/Client/Lcd/Api/wasmAPI.dart';
-import 'package:terra_dart/src/Client/Lcd/LocalTerra/localTerra.dart';
+import 'package:terra_dart/Client/Lcd/Api/slashingAPI.dart';
 
-import '../../rest/services/terraRestfulService.dart';
-import '../Client/Lcd/lcdClient.dart';
-import '../TerraStartup.dart';
+import '../../Client/Lcd/Api/authAPI.dart';
+import '../../Client/Lcd/Api/authzAPI.dart';
+import '../../Client/Lcd/Api/bankAPI.dart';
+import '../../Client/Lcd/Api/distributionAPI.dart';
+import '../../Client/Lcd/Api/feeGrantAPI.dart';
+import '../../Client/Lcd/Api/govAPI.dart';
+import '../../Client/Lcd/Api/ibcAPI.dart';
+import '../../Client/Lcd/Api/ibcTransferAPI.dart';
+import '../../Client/Lcd/Api/marketAPI.dart';
+import '../../Client/Lcd/Api/mintAPI.dart';
+import '../../Client/Lcd/Api/oracleAPI.dart';
+import '../../Client/Lcd/Api/stakingAPI.dart';
+import '../../Client/Lcd/Api/tendermintAPI.dart';
+import '../../Client/Lcd/Api/treasuryAPI.dart';
+import '../../Client/Lcd/Api/txAPI.dart';
+import '../../Client/Lcd/Api/txBroadcastApi.dart';
+import '../../Client/Lcd/Api/wasmAPI.dart';
+import '../../Client/Lcd/LocalTerra/localTerra.dart';
+import '../../Client/Lcd/lcdClient.dart';
+import '../../TerraStartup.dart';
+import '../rest/services/terraRestfulService.dart';
 
 class TerraMainDIModule {
   static void load() {

@@ -1,5 +1,5 @@
-import 'package:terra_dart/src/Configuration/Environment/TerraEnvironment.dart';
-import '../../Client/Lcd/Models/LCDClientConfig.dart';
+import '../../../Client/Lcd/Models/LCDClientConfig.dart';
+import '../../../terraEnvironment.dart';
 
 class TerraClientConfiguration {
   static bool? isClassicChain;

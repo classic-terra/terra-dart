@@ -3,8 +3,4 @@
 /// More dartdocs go here.
 library terra_dart;
 
-
-//export 'src/**.dart';
-
-
 // TODO: Export any libraries intended for clients of this package.
